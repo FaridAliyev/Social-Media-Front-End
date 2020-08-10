@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Social Media</title>
 </head>
@@ -191,12 +193,16 @@
                                 <div class="compose-option">
                                     <i class="fas fa-camera"></i>
                                     <span>Media</span>
-                                    <input type="file" accept="image/*" multiple>
+                                    <input id="publish-input" type="file" accept="image/*" multiple>
                                 </div>
                             </div>
                             <div class="hidden-preview">
                                 <div class="preview-wrapper">
                                     <h6>Your selected images will appear here</h6>
+                                    <button class="btn btn-danger publish-remove">Remove All</button>
+                                </div>
+                                <div class="owl-carousel owl-theme publish-owl-carousel">
+
                                 </div>
                             </div>
                             <div class="publish-wrapper">
@@ -214,6 +220,12 @@
 
     <!-- main end -->
 
+
+    <!-- <div class="item">
+            <div class="image-preview">
+                <img src="img/profile-placeholder.png" alt="">
+            </div>
+        </div> -->
 
     <script src="https://kit.fontawesome.com/bd3d602acc.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
