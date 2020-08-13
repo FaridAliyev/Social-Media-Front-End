@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -15,7 +15,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Social Media</title>
+    <title>Perivallo</title>
 </head>
 
 <body>
@@ -104,6 +104,37 @@
                                     <!-- <i class="fas fa-circle new-icon"></i> -->
                                 </a>
                                 <ul class="notification-dropdown">
+                                    <li class="follow-request-item">
+                                        <div class="follow-request-wrapper">
+                                            <div class="request-caption">
+                                                <h6>Follow Requests</h6>
+                                            </div>
+                                            <div class="request-body">
+                                                <a href="#">
+                                                    <img src="img/profile-placeholder.png" alt="Profile">
+                                                </a>
+                                                <a href="#" class="username">_farid__aliyev_</a>
+                                                <div class="action-buttons">
+                                                    <button type="button"
+                                                        class="confirm-button action-btn">Confirm</button>
+                                                    <button type="button"
+                                                        class="ignore-button action-btn">Ignore</button>
+                                                </div>
+                                            </div>
+                                            <div class="request-body">
+                                                <a href="#">
+                                                    <img src="img/profile-placeholder.png" alt="Profile">
+                                                </a>
+                                                <a href="#" class="username">_farid__aliyev_</a>
+                                                <div class="action-buttons">
+                                                    <button type="button"
+                                                        class="confirm-button action-btn">Confirm</button>
+                                                    <button type="button"
+                                                        class="ignore-button action-btn">Ignore</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li class="notification-item">
                                         <a href="#">
                                             <div class="notification-wrapper">
@@ -131,9 +162,9 @@
                                                     <img src="img/profile-placeholder.png" alt="">
                                                 </div> -->
                                                 <!-- <div class="button-wrapper">
-                                                    <button type="button" class="follow-button">Follow</button>
-                                                    <button type="button" class="following-button">Following</button>
-                                                    <button type="button" class="requested-button">Requested</button>
+                                                    <button type="button" class="follow-button action-btn">Follow</button>
+                                                    <button type="button" class="following-button action-btn">Following</button>
+                                                    <button type="button" class="requested-button action-btn">Requested</button>
                                                 </div> -->
                                             </div>
                                         </a>
@@ -170,7 +201,7 @@
     <main id="main">
         <div class="container">
             <div class="row">
-                <div class="col-8">
+                <div class="col-lg-8 col-md-12">
                     <div class="compose-card">
                         <div class="header">
                             <div class="content-wrapper">
@@ -199,10 +230,12 @@
                             <div class="hidden-preview">
                                 <div class="preview-wrapper">
                                     <h6>Your selected images will appear here</h6>
-                                    <button class="btn btn-danger publish-remove">Remove All</button>
                                 </div>
                                 <div class="owl-carousel owl-theme publish-owl-carousel">
 
+                                </div>
+                                <div class="remove-button-wrapper">
+                                    <button class="btn btn-danger publish-remove mt-3">Remove All</button>
                                 </div>
                             </div>
                             <div class="publish-wrapper">
@@ -210,9 +243,171 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-4">
 
+                    <div class="feed-post">
+                        <div class="content-wrapper">
+                            <div class="post-card-header">
+                                <div class="user-block">
+                                    <a class="pPL" href="#">
+                                        <div class="profile-pic">
+                                            <img src="img/profile-placeholder.png" alt="">
+                                        </div>
+                                    </a>
+                                    <a href="#" class="username">_farid__aliyev_</a>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="button">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-card-body">
+                                <div class="post-text">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas fugit sit
+                                        architecto nostrum veritatis ullam doloribus impedit earum aut omnis?</p>
+                                </div>
+                                <div class="post-image">
+                                    <a href="#">
+                                        <img src="img/1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <!-- <div class="owl-carousel owl-theme post-owl-carousel">
+                                    <div class="item">
+                                        <div class="post-image">
+                                            <a href="#">
+                                                <img src="img/1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="post-image">
+                                            <a href="#">
+                                                <img src="img/logo-blue.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="post-card-footer">
+                                <div class="actions">
+                                    <div class="like">
+                                        <i class="far fa-heart prelike"></i>
+                                        <i class="fas fa-heart liked"></i>
+                                    </div>
+                                    <div class="comment">
+                                        <a href="#">
+                                            <i class="far fa-comment"></i>
+                                        </a>
+                                    </div>
+                                    <div class="bookmark">
+                                        <i class="far fa-bookmark prebookmark"></i>
+                                        <i class="fas fa-bookmark bookmarked"></i>
+                                    </div>
+                                </div>
+                                <div class="post-info">
+                                    <div class="likers-group">
+                                        <img src="img/profile-placeholder.png" alt="">
+                                        <img src="img/profile-placeholder.png" alt="">
+                                    </div>
+                                    <div class="likers-text">
+                                        <p>
+                                            <a href="#">Milly</a>
+                                            ,
+                                            <a href="#">David</a>
+                                        </p>
+                                        <p>and 23 more liked this</p>
+                                    </div>
+                                    <div class="social-count">
+                                        <div class="likes-count">
+                                            <i class="far fa-heart"></i>
+                                            <span>27</span>
+                                        </div>
+                                        <div class="comments-count">
+                                            <i class="far fa-comment"></i>
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 sidebar-res">
+                    <div class="sidebar">
+                        <div class="profile-card">
+                            <div class="profile-wrapper">
+                                <a href="#">
+                                    <div class="profile-pic">
+                                        <img src="img/profile-placeholder.png" alt="">
+                                    </div>
+                                </a>
+                                <div class="user-info">
+                                    <a href="#" class="username">_farid__aliyev_</a>
+                                    <p class="name">Farid Aliyev</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="suggest-card">
+                            <div class="suggest-card-header">
+                                <h4>Suggested Friends</h4>
+                            </div>
+                            <div class="suggest-card-body">
+                                <div class="add-friend-block">
+                                    <img src="img/profile-placeholder.png" alt="Profile picture">
+                                    <div class="page-meta">
+                                        <span>Sadiq Əliyev</span>
+                                        <span>Melbourne</span>
+                                    </div>
+                                    <div class="add-friend">
+                                        <button type="button" class="follow-button action-btn">Follow</button>
+                                    </div>
+                                </div>
+                                <div class="add-friend-block">
+                                    <img src="img/profile-placeholder.png" alt="Profile picture">
+                                    <div class="page-meta">
+                                        <span>Sadiq Əliyev</span>
+                                        <span>Melbourne</span>
+                                    </div>
+                                    <div class="add-friend">
+                                        <button type="button" class="follow-button action-btn">Follow</button>
+                                    </div>
+                                </div>
+                                <div class="add-friend-block">
+                                    <img src="img/profile-placeholder.png" alt="Profile picture">
+                                    <div class="page-meta">
+                                        <span>Sadiq Əliyev</span>
+                                        <span>Melbourne</span>
+                                    </div>
+                                    <div class="add-friend">
+                                        <button type="button" class="follow-button action-btn">Follow</button>
+                                    </div>
+                                </div>
+                                <div class="add-friend-block">
+                                    <img src="img/profile-placeholder.png" alt="Profile picture">
+                                    <div class="page-meta">
+                                        <span>Sadiq Əliyev</span>
+                                        <span>Melbourne</span>
+                                    </div>
+                                    <div class="add-friend">
+                                        <button type="button" class="follow-button action-btn">Follow</button>
+                                    </div>
+                                </div>
+                                <div class="add-friend-block">
+                                    <img src="img/profile-placeholder.png" alt="Profile picture">
+                                    <div class="page-meta">
+                                        <span>Kamil Zeynallı</span>
+                                        <span>Baku</span>
+                                    </div>
+                                    <div class="add-friend">
+                                        <button type="button" class="follow-button action-btn">Follow</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright">
+                            <span>© 2020 PERIVALLO FROM FS STUDIO</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

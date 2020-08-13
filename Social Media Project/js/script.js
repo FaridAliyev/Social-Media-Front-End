@@ -137,7 +137,7 @@ $(document).ready(function () {
         upload(ev.target.files);
         if ($(this).val() != null) {
             $('.preview-wrapper h6').hide();
-            $('.preview-wrapper .publish-remove').show();
+            $('.hidden-preview .publish-remove').show();
             $('.publish-button').removeAttr("disabled");
             $('.publish-button').css('opacity', '1');
         }
@@ -146,9 +146,8 @@ $(document).ready(function () {
         }
     });
 
-    $('.publish-remove').click(function () {
+    $('.hidden-preview .publish-remove').click(function () {
         $('#publish-input').val(null);
-        console.log($('#publish').val())
         if($('#publish').val()==""){
             $('.publish-button').attr("disabled",true);
             $('.publish-button').css('opacity', '0.4');
@@ -176,4 +175,54 @@ $(document).ready(function () {
         }
     }
 
+    // posts
+
+    $('.prelike,.prebookmark').click(function(){
+        $(this).next().show();
+        $(this).hide();
+    });
+
+    $('.liked, .bookmarked').click(function(){
+        $(this).prev().show();
+        $(this).hide();
+    });
+
+    $('.post-owl-carousel').owlCarousel({
+        items: 1,
+        dots: true
+    });
+
+    // login
+
+    $('#login-password-input').keyup(function(){
+        if ($(this).val().length > 0) {
+            $('.vision-icon').fadeIn(100);
+        }
+        else {
+            $('.vision-icon').fadeOut(100);
+        }
+    });
+
+    $('#login-password-input').keypress(function(){
+        if ($(this).val().length > 0) {
+            $('.vision-icon').fadeIn(100);
+        }
+        else {
+            $('.vision-icon').fadeOut(100);
+        }
+    });
+
+    $('.vision-icon').click(function(){
+        $(this).hide();
+        $('.locked-icon').hide();
+        $('.vision-on-icon, .unlocked-icon').show();
+        $('#login-password-input').prop('type', 'text');
+    });
+
+    $('.vision-on-icon').click(function(){
+        $(this).hide();
+        $('.unlocked-icon').hide();
+        $('.vision-icon, .locked-icon').show();
+        $('#login-password-input').prop('type', 'password');
+    });
 });
