@@ -7,7 +7,6 @@
 }
 
 body {
-    background: #f4f4f4;
     // font-family: "Open Sans", sans-serif;
     font-family: "Roboto", sans-serif;
     line-height: 1.5;
@@ -414,6 +413,7 @@ body {
 
 #main {
     margin-top: 70px;
+    background: #f4f4f4;
     .container {
         .row {
             padding-top: 35px;
@@ -655,13 +655,9 @@ body {
                                 i {
                                     font-size: 18px;
                                     color: #888da8;
-                                    transition: color 0.3s;
                                 }
                                 &:hover {
-                                    i {
-                                        color: black;
-                                    }
-                                    background: #f0f0f0;
+                                    background: #f5f5f5;
                                 }
                             }
                         }
@@ -677,9 +673,12 @@ body {
                         .post-image {
                             position: relative;
                             margin: 10px 0;
+                            height: 400px;
                             a {
                                 img {
                                     width: 100%;
+                                    height: 100%;
+                                    object-fit: scale-down;
                                 }
                             }
                         }
@@ -894,6 +893,7 @@ body {
 // login
 
 #login {
+    background: white;
     .container-fluid {
         margin: 0;
         padding: 0;
@@ -918,7 +918,6 @@ body {
                 }
             }
             .right-side {
-                background: white;
                 min-height: 100vh;
                 display: flex;
                 justify-content: center;
@@ -953,6 +952,20 @@ body {
                 .form-wrapper {
                     max-width: 540px;
                     min-width: 380px;
+                    .res-logo{
+                        width: 380px;
+                        display: none;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .title {
+                        text-align: center;
+                        margin-bottom: 15px;
+                        h5 {
+                            font-size: 35px;
+                        }
+                    }
                     .login-form {
                         form {
                             .field {
@@ -974,12 +987,12 @@ body {
                                         padding-top: calc(0.5em - 1px);
                                         position: relative;
                                         transition: all 0.3s;
-                                        &:focus{
+                                        &:focus {
                                             outline: none;
-                                            border: 1px solid #83AEE2;
+                                            border: 1px solid #83aee2;
                                         }
-                                        &:focus+.input-icon i{
-                                            color: #7FA9DE;
+                                        &:focus + .input-icon i {
+                                            color: #7fa9de;
                                         }
                                     }
                                     .input-icon {
@@ -996,11 +1009,11 @@ body {
                                             color: #cecece;
                                             transition: all 0.3s;
                                         }
-                                        .unlocked-icon{
+                                        .unlocked-icon {
                                             display: none;
                                         }
                                     }
-                                    .pass-vision-icon{
+                                    .pass-vision-icon {
                                         position: absolute;
                                         top: 0;
                                         right: 0;
@@ -1009,18 +1022,18 @@ body {
                                         display: flex;
                                         justify-content: center;
                                         align-items: center;
-                                        i{
+                                        i {
                                             font-size: 18px;
                                             color: #cecece;
                                             transition: all 0.3s;
                                             cursor: pointer;
                                             display: none;
                                             transition: color 0.3s;
-                                            &:hover{
-                                                color: #7FA9DE;
+                                            &:hover {
+                                                color: #7fa9de;
                                             }
                                         }
-                                        .vision-on-icon{
+                                        .vision-on-icon {
                                             display: none;
                                         }
                                     }
@@ -1042,8 +1055,10 @@ body {
                                         outline: none;
                                         width: 100%;
                                         transition: all 0.3s;
-                                        &:hover{
-                                            box-shadow: 0 14px 26px -12px rgba(61,112,178,0.42),0 4px 23px 0px rgba(0,0,0,0.12),0 8px 10px -5px rgba(61,112,178,0.2) !important;
+                                        &:hover {
+                                            box-shadow: 0 14px 26px -12px rgba(61, 112, 178, 0.42),
+                                                0 4px 23px 0px rgba(0, 0, 0, 0.12),
+                                                0 8px 10px -5px rgba(61, 112, 178, 0.2) !important;
                                             opacity: 0.8;
                                         }
                                     }
@@ -1051,6 +1066,74 @@ body {
                                 &:not(:last-child) {
                                     margin-bottom: 0.75rem;
                                 }
+                                .switch-block {
+                                    display: flex;
+                                    align-items: center;
+                                    .switch {
+                                        position: relative;
+                                        display: inline-block;
+                                        width: 46px;
+                                        height: 26px;
+                                        margin: 0;
+                                        input {
+                                            opacity: 0;
+                                            width: 0;
+                                            height: 0;
+                                            &:checked+span{
+                                                background: #1CE589;
+                                            }
+                                            &:focus+span{
+                                                box-shadow: 0 0 1px #1CE589;
+                                            }
+                                            &:checked+span::before{
+                                                transform: translateX(19px);
+                                            }
+                                        }
+                                        span {
+                                            position: absolute;
+                                            cursor: pointer;
+                                            top: 0;
+                                            left: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            background-color: #ccc;
+                                            transition: 0.4s;
+                                            border-radius: 34px;
+                                            &::before {
+                                                position: absolute;
+                                                content: "";
+                                                height: 19px;
+                                                width: 20px;
+                                                left: 4px;
+                                                bottom: 4px;
+                                                background-color: white;
+                                                transition: 0.4s;
+                                                border-radius: 50%;
+                                            }
+                                        }
+                                    }
+                                    .meta{
+                                        margin-left: 6px;
+                                        p{
+                                            margin: 0;
+                                            font-size: .9rem;
+                                            color: #999;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .account-link {
+                        text-align: center;
+                        margin-top: 10px;
+                        a {
+                            text-decoration: none;
+                            font-size: 0.8rem;
+                            color: #abb0be;
+                            transition: color 0.3s;
+                            &:hover {
+                                color: #3d70b2;
                             }
                         }
                     }
@@ -1078,6 +1161,38 @@ body {
             .row {
                 .sidebar-res {
                     display: none;
+                }
+            }
+        }
+    }
+    #login {
+        .container-fluid {
+            .row {
+                .login-left-res {
+                    display: none;
+                }
+                .right-side {
+                    .logo-wrapper {
+                        display: none;
+                    }
+                    .form-wrapper{
+                        .res-logo{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    #login {
+        .container-fluid {
+            .row {
+                .right-side {
+                    .form-wrapper {
+                        min-width: 320px;
+                    }
                 }
             }
         }
@@ -1135,6 +1250,20 @@ body {
             .row {
                 .search-bar-mb {
                     margin-right: -40px;
+                }
+            }
+        }
+    }
+    #login {
+        .container-fluid {
+            .row {
+                .right-side {
+                    .form-wrapper {
+                        min-width: 90%;
+                        .res-logo{
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }

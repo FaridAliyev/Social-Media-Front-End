@@ -6,7 +6,6 @@
 }
 
 body {
-  background: #f4f4f4;
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
 }
@@ -497,6 +496,7 @@ body {
 
 #main {
   margin-top: 70px;
+  background: #f4f4f4;
 }
 
 #main .container .row {
@@ -815,16 +815,10 @@ body {
 #main .container .row .feed-post .content-wrapper .post-card-header .dropdown .button i {
   font-size: 18px;
   color: #888da8;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
 }
 
 #main .container .row .feed-post .content-wrapper .post-card-header .dropdown .button:hover {
-  background: #f0f0f0;
-}
-
-#main .container .row .feed-post .content-wrapper .post-card-header .dropdown .button:hover i {
-  color: black;
+  background: #f5f5f5;
 }
 
 #main .container .row .feed-post .content-wrapper .post-card-body {
@@ -839,10 +833,14 @@ body {
 #main .container .row .feed-post .content-wrapper .post-card-body .post-image {
   position: relative;
   margin: 10px 0;
+  height: 400px;
 }
 
 #main .container .row .feed-post .content-wrapper .post-card-body .post-image a img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 #main .container .row .feed-post .content-wrapper .post-card-footer {
@@ -1102,6 +1100,10 @@ body {
   line-height: 13px;
 }
 
+#login {
+  background: white;
+}
+
 #login .container-fluid {
   margin: 0;
   padding: 0;
@@ -1136,7 +1138,6 @@ body {
 }
 
 #login .container-fluid .row .right-side {
-  background: white;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1198,6 +1199,24 @@ body {
   min-width: 380px;
 }
 
+#login .container-fluid .row .right-side .form-wrapper .res-logo {
+  width: 380px;
+  display: none;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .res-logo img {
+  width: 100%;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .title h5 {
+  font-size: 35px;
+}
+
 #login .container-fluid .row .right-side .form-wrapper .login-form form .field .control {
   position: relative;
 }
@@ -1223,11 +1242,11 @@ body {
 
 #login .container-fluid .row .right-side .form-wrapper .login-form form .field .control .input:focus {
   outline: none;
-  border: 1px solid #83AEE2;
+  border: 1px solid #83aee2;
 }
 
 #login .container-fluid .row .right-side .form-wrapper .login-form form .field .control .input:focus + .input-icon i {
-  color: #7FA9DE;
+  color: #7fa9de;
 }
 
 #login .container-fluid .row .right-side .form-wrapper .login-form form .field .control .input-icon {
@@ -1287,7 +1306,7 @@ body {
 }
 
 #login .container-fluid .row .right-side .form-wrapper .login-form form .field .control .pass-vision-icon i:hover {
-  color: #7FA9DE;
+  color: #7fa9de;
 }
 
 #login .container-fluid .row .right-side .form-wrapper .login-form form .field .control .pass-vision-icon .vision-on-icon {
@@ -1331,6 +1350,96 @@ body {
   margin-bottom: 0.75rem;
 }
 
+#login .container-fluid .row .right-side .form-wrapper .login-form form .field .switch-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .login-form form .field .switch-block .switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+  margin: 0;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .login-form form .field .switch-block .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .login-form form .field .switch-block .switch input:checked + span {
+  background: #1CE589;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .login-form form .field .switch-block .switch input:focus + span {
+  -webkit-box-shadow: 0 0 1px #1CE589;
+          box-shadow: 0 0 1px #1CE589;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .login-form form .field .switch-block .switch input:checked + span::before {
+  -webkit-transform: translateX(19px);
+          transform: translateX(19px);
+}
+
+#login .container-fluid .row .right-side .form-wrapper .login-form form .field .switch-block .switch span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .login-form form .field .switch-block .switch span::before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .login-form form .field .switch-block .meta {
+  margin-left: 6px;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .login-form form .field .switch-block .meta p {
+  margin: 0;
+  font-size: .9rem;
+  color: #999;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .account-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .account-link a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #abb0be;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+#login .container-fluid .row .right-side .form-wrapper .account-link a:hover {
+  color: #3d70b2;
+}
+
 @media (max-width: 991px) {
   #navbar .container .row .search-bar {
     display: none;
@@ -1342,6 +1451,21 @@ body {
   }
   #main .container .row .sidebar-res {
     display: none;
+  }
+  #login .container-fluid .row .login-left-res {
+    display: none;
+  }
+  #login .container-fluid .row .right-side .logo-wrapper {
+    display: none;
+  }
+  #login .container-fluid .row .right-side .form-wrapper .res-logo {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  #login .container-fluid .row .right-side .form-wrapper {
+    min-width: 320px;
   }
 }
 
@@ -1391,6 +1515,12 @@ body {
 @media (max-width: 370px) {
   #navbar .container .row .search-bar-mb {
     margin-right: -40px;
+  }
+  #login .container-fluid .row .right-side .form-wrapper {
+    min-width: 90%;
+  }
+  #login .container-fluid .row .right-side .form-wrapper .res-logo {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
