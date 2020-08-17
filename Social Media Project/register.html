@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Perivallo | Register</title>
+</head>
+
+<body>
+
+    <nav id="fake-nav">
+        <img src="img/logo-blue.png" alt="">
+    </nav>
+
+    <main id="register">
+        <div class="process-bar-wrap">
+            <div class="process-bar">
+                <div class="progress-wrap">
+                    <div class="track"></div>
+                    <div class="bar"></div>
+                    <div id="step-dot-1" class="dot is-first is-active is-current" data-step="0">
+                        <i class="far fa-smile"></i>
+                    </div>
+                    <div id="step-dot-2" class="dot is-second" data-step="25">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div id="step-dot-3" class="dot is-third" data-step="50">
+                        <i class="far fa-image"></i>
+                    </div>
+                    <div id="step-dot-4" class="dot is-fourth" data-step="75">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div id="step-dot-5" class="dot is-fifth" data-step="100">
+                        <i class="far fa-flag"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="outer-panel">
+            <div class="outer-panel-inner">
+                <div class="process-title">
+                    <h2 id="step-title-1" class="step-title is-active">Welcome to Perivallo!</h2>
+                    <h2 id="step-title-2" class="step-title">Tell us more about you.</h2>
+                    <h2 id="step-title-3" class="step-title">Upload a profile picture.</h2>
+                    <h2 id="step-title-4" class="step-title">Secure your account.</h2>
+                    <h2 id="step-title-5" class="step-title">You're all set. Ready?</h2>
+                </div>
+
+                <div id="signup-panel-1" class="process-panel-wrap is-active">
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <div class="welcoming-card">
+                                <img src="img/Greeting.jpg" alt="">
+                                <h3>Let's party</h3>
+                                <p>Find friends and create a warming environment</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="welcoming-card">
+                                <img src="img/Bonfire.jpg" alt="">
+                                <h3>Gather around the fire</h3>
+                                <p>Share your untold stories and chat with friends</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="welcoming-card">
+                                <img src="img/Journey.jpg" alt="">
+                                <h3>What are you waiting for?</h3>
+                                <p>Start your journey in this unprecedented world!</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="continue-button-wrapper">
+                                <button class="process-button" data-step="step-dot-2">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="signup-panel-2" class="process-panel-wrap">
+                    <div class="row justify-content-center">
+                        <div class="col-7">
+                            <div class="form-panel">
+                                <div class="field">
+                                    <label>Name</label>
+                                    <div class="control">
+                                        <input type="text" class="input" placeholder="Enter your name">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label>Username</label>
+                                    <div class="control">
+                                        <input type="text" class="input" placeholder="Enter your username">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label>Email</label>
+                                    <div class="control">
+                                        <input type="text" class="input" placeholder="Enter your email address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="process-button" data-step="step-dot-1">Back</button>
+                                <button class="process-button is-next" data-step="step-dot-3">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+    <script src="https://kit.fontawesome.com/bd3d602acc.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
