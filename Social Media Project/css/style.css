@@ -1240,19 +1240,19 @@ body {
 }
 
 #login .container-fluid .row .right-side .form-wrapper .login-form form .field .control .input::-webkit-input-placeholder {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 #login .container-fluid .row .right-side .form-wrapper .login-form form .field .control .input:-ms-input-placeholder {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 #login .container-fluid .row .right-side .form-wrapper .login-form form .field .control .input::-ms-input-placeholder {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 #login .container-fluid .row .right-side .form-wrapper .login-form form .field .control .input::placeholder {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 #login .container-fluid .row .right-side .form-wrapper .login-form form .field .control .input:focus {
@@ -1477,6 +1477,7 @@ body {
 
 #register {
   background: #f4f4f4;
+  width: 100%;
 }
 
 #register .process-bar-wrap {
@@ -1487,7 +1488,7 @@ body {
   height: 18px;
   background: #fff;
   border-radius: 100px;
-  max-width: 520px;
+  max-width: 270px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1561,18 +1562,6 @@ body {
 }
 
 #register .process-bar-wrap .process-bar .progress-wrap .dot.is-second {
-  left: calc(25% - 19px);
-}
-
-#register .process-bar-wrap .process-bar .progress-wrap .dot.is-third {
-  left: calc(50% - 19px);
-}
-
-#register .process-bar-wrap .process-bar .progress-wrap .dot.is-fourth {
-  left: calc(75% - 19px);
-}
-
-#register .process-bar-wrap .process-bar .progress-wrap .dot.is-fifth {
   right: -19px;
 }
 
@@ -1768,6 +1757,10 @@ body {
   padding-left: 8px;
 }
 
+#register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field .control {
+  position: relative;
+}
+
 #register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field .control input {
   border: none;
   height: 30px;
@@ -1783,31 +1776,88 @@ body {
 }
 
 #register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field .control input::-webkit-input-placeholder {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 #register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field .control input:-ms-input-placeholder {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 #register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field .control input::-ms-input-placeholder {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 #register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field .control input::placeholder {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 #register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field .control input:focus {
   outline: none;
 }
 
+#register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field .control .pass-vision-icon {
+  position: absolute;
+  top: -7px;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field .control .pass-vision-icon i {
+  font-size: 18px;
+  color: #cecece;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+#register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field .control .pass-vision-icon i:hover {
+  color: #7fa9de;
+}
+
+#register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field .control .pass-vision-icon .reg-vision-on-icon {
+  display: none;
+}
+
 #register .outer-panel .outer-panel-inner .process-panel-wrap .form-panel .field:last-child {
   margin-bottom: 0;
 }
 
-#register .outer-panel .outer-panel-inner .process-panel-wrap .buttons {
+#register .outer-panel .outer-panel-inner .process-panel-wrap .actions-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#register .outer-panel .outer-panel-inner .process-panel-wrap .actions-wrapper .account-link a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #abb0be;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+#register .outer-panel .outer-panel-inner .process-panel-wrap .actions-wrapper .account-link a:hover {
+  color: #3d70b2;
+}
+
+#register .outer-panel .outer-panel-inner .process-panel-wrap .actions-wrapper .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1817,9 +1867,10 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin-left: auto;
 }
 
-#register .outer-panel .outer-panel-inner .process-panel-wrap .buttons button {
+#register .outer-panel .outer-panel-inner .process-panel-wrap .actions-wrapper .buttons button {
   border: 1px solid transparent;
   outline: none;
   min-width: 90px;
@@ -1844,12 +1895,12 @@ body {
   height: 3.5em;
 }
 
-#register .outer-panel .outer-panel-inner .process-panel-wrap .buttons button:hover {
+#register .outer-panel .outer-panel-inner .process-panel-wrap .actions-wrapper .buttons button:hover {
   border-color: #b5b5b5;
   color: #363636;
 }
 
-#register .outer-panel .outer-panel-inner .process-panel-wrap .buttons button:not(:last-child) {
+#register .outer-panel .outer-panel-inner .process-panel-wrap .actions-wrapper .buttons button:not(:last-child) {
   margin-right: 0.5rem;
 }
 
@@ -1878,11 +1929,20 @@ body {
   #login .container-fluid .row .right-side .form-wrapper .res-logo {
     display: block;
   }
+  #register .outer-panel .outer-panel-inner .process-panel-wrap .container .row .welcoming-card {
+    min-height: 319px;
+    max-height: 319px;
+  }
 }
 
 @media (max-width: 767px) {
   #login .container-fluid .row .right-side .form-wrapper {
     min-width: 320px;
+  }
+  #register .outer-panel .outer-panel-inner .process-panel-wrap .container .row .welcoming-card {
+    min-height: auto;
+    height: auto;
+    margin-top: 10px;
   }
 }
 
@@ -1938,6 +1998,15 @@ body {
   }
   #login .container-fluid .row .right-side .form-wrapper .res-logo {
     width: 100%;
+  }
+  #register .outer-panel .outer-panel-inner .process-panel-wrap .container .row .actions-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #register .outer-panel .outer-panel-inner .process-panel-wrap .container .row .actions-wrapper .buttons {
+    margin: 0;
   }
 }
 

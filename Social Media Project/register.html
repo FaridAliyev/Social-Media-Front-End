@@ -29,17 +29,8 @@
                     <div id="step-dot-1" class="dot is-first is-active is-current" data-step="0">
                         <i class="far fa-smile"></i>
                     </div>
-                    <div id="step-dot-2" class="dot is-second" data-step="25">
+                    <div id="step-dot-2" class="dot is-second" data-step="100">
                         <i class="far fa-user"></i>
-                    </div>
-                    <div id="step-dot-3" class="dot is-third" data-step="50">
-                        <i class="far fa-image"></i>
-                    </div>
-                    <div id="step-dot-4" class="dot is-fourth" data-step="75">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div id="step-dot-5" class="dot is-fifth" data-step="100">
-                        <i class="far fa-flag"></i>
                     </div>
                 </div>
             </div>
@@ -50,76 +41,98 @@
                 <div class="process-title">
                     <h2 id="step-title-1" class="step-title is-active">Welcome to Perivallo!</h2>
                     <h2 id="step-title-2" class="step-title">Tell us more about you.</h2>
-                    <h2 id="step-title-3" class="step-title">Upload a profile picture.</h2>
-                    <h2 id="step-title-4" class="step-title">Secure your account.</h2>
-                    <h2 id="step-title-5" class="step-title">You're all set. Ready?</h2>
                 </div>
 
                 <div id="signup-panel-1" class="process-panel-wrap is-active">
-                    <div class="row justify-content-center">
-                        <div class="col-4">
-                            <div class="welcoming-card">
-                                <img src="img/Greeting.jpg" alt="">
-                                <h3>Let's party</h3>
-                                <p>Find friends and create a warming environment</p>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="welcoming-card">
+                                    <img src="img/Greeting.jpg" alt="">
+                                    <h3>Let's party</h3>
+                                    <p>Find friends and create a warming environment</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="welcoming-card">
-                                <img src="img/Bonfire.jpg" alt="">
-                                <h3>Gather around the fire</h3>
-                                <p>Share your untold stories and chat with friends</p>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="welcoming-card">
+                                    <img src="img/Bonfire.jpg" alt="">
+                                    <h3>Gather around the fire</h3>
+                                    <p>Share your untold stories and chat with friends</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="welcoming-card">
-                                <img src="img/Journey.jpg" alt="">
-                                <h3>What are you waiting for?</h3>
-                                <p>Start your journey in this unprecedented world!</p>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="welcoming-card">
+                                    <img src="img/Journey.jpg" alt="">
+                                    <h3>What are you waiting for?</h3>
+                                    <p>Start your journey in this unprecedented world!</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="continue-button-wrapper">
-                                <button class="process-button" data-step="step-dot-2">Continue</button>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="continue-button-wrapper">
+                                    <button class="process-button" data-step="step-dot-2">Continue</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div id="signup-panel-2" class="process-panel-wrap">
-                    <div class="row justify-content-center">
-                        <div class="col-7">
-                            <div class="form-panel">
-                                <div class="field">
-                                    <label>Name</label>
-                                    <div class="control">
-                                        <input type="text" class="input" placeholder="Enter your name">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7 col-md-7 col-sm-12">
+                                <form action="#">
+                                    <div class="form-panel">
+                                        <div class="field">
+                                            <label>Name</label>
+                                            <div class="control">
+                                                <input type="text" placeholder="Enter your name">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label>Username</label>
+                                            <div class="control">
+                                                <input type="text" placeholder="Enter your username">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label>Email</label>
+                                            <div class="control">
+                                                <input type="text" placeholder="Enter your email address">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label>Password</label>
+                                            <div class="control">
+                                                <input type="password" id="reg-password-input" placeholder="Enter your password">
+                                                <div class="pass-vision-icon">
+                                                    <i class="fas fa-eye reg-vision-icon"></i>
+                                                    <i class="fas fa-eye-slash reg-vision-on-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label>Confirm Password</label>
+                                            <div class="control">
+                                                <input type="password" id="reg-confirm-pass" placeholder="Confirm your password">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="field">
-                                    <label>Username</label>
-                                    <div class="control">
-                                        <input type="text" class="input" placeholder="Enter your username">
+                                    <div class="actions-wrapper">
+                                        <div class="account-link">
+                                            <a href="login.html">Have an account? Log In</a>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="process-button" data-step="step-dot-1">Back</button>
+                                            <button type="submit">Submit</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="field">
-                                    <label>Email</label>
-                                    <div class="control">
-                                        <input type="text" class="input" placeholder="Enter your email address">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="buttons">
-                                <button class="process-button" data-step="step-dot-1">Back</button>
-                                <button class="process-button is-next" data-step="step-dot-3">Next</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </main>
 
 

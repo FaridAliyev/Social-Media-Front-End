@@ -241,14 +241,8 @@ $(document).ready(function () {
 
         if (stepValue == '0') {
             $('#signup-panel-1, #step-title-1').addClass('is-active');
-        } else if (stepValue == '25') {
-            $('#signup-panel-2, #step-title-2').addClass('is-active');
-        } else if (stepValue == '50') {
-            $('#signup-panel-3, #step-title-3').addClass('is-active');
-        } else if (stepValue == '75') {
-            $('#signup-panel-4, #step-title-4').addClass('is-active');
         } else if (stepValue == '100') {
-            $('#signup-panel-5, #step-title-5').addClass('is-active');
+            $('#signup-panel-2, #step-title-2').addClass('is-active');
         }
     });
 
@@ -256,5 +250,39 @@ $(document).ready(function () {
         var $this = $(this);
         var targetStepDot = $this.attr('data-step');
         $('#' + targetStepDot).trigger('click');
+    });
+
+    $('#reg-password-input').keyup(function () {
+        if ($(this).val().length > 0) {
+            $('.reg-vision-icon').fadeIn(100);
+        }
+        else {
+            $('.reg-vision-icon').fadeOut(100);
+        }
+    });
+
+    $('#reg-password-input').keypress(function () {
+        if ($(this).val().length > 0) {
+            $('.reg-vision-icon').fadeIn(100);
+        }
+        else {
+            $('.reg-vision-icon').fadeOut(100);
+        }
+    });
+
+    $('.reg-vision-icon').click(function () {
+        $(this).hide();
+        $('.reg-vision-on-icon').show();
+        $('#reg-password-input').prop('type', 'text');
+    });
+
+    $('.reg-vision-on-icon').click(function () {
+        $(this).hide();
+        $('.reg-vision-icon').show();
+        $('#reg-password-input').prop('type', 'password');
+    });
+
+    $('#reg-confirm-pass').on("cut copy paste",function(e) {
+        e.preventDefault();
     });
 });

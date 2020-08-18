@@ -986,8 +986,8 @@ body {
                                         padding-top: calc(0.5em - 1px);
                                         position: relative;
                                         transition: all 0.3s;
-                                        &::placeholder{
-                                            color: #C0C0C0;
+                                        &::placeholder {
+                                            color: #c0c0c0;
                                         }
                                         &:focus {
                                             outline: none;
@@ -1162,13 +1162,14 @@ body {
 
 #register {
     background: #f4f4f4;
+    width: 100%;
     .process-bar-wrap {
         padding: 30px 0 0 0;
         .process-bar {
             height: 18px;
             background: #fff;
             border-radius: 100px;
-            max-width: 520px;
+            max-width: 270px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -1220,15 +1221,6 @@ body {
                     left: -19px;
                 }
                 .dot.is-second {
-                    left: calc(25% - 19px);
-                }
-                .dot.is-third {
-                    left: calc(50% - 19px);
-                }
-                .dot.is-fourth {
-                    left: calc(75% - 19px);
-                }
-                .dot.is-fifth {
                     right: -19px;
                 }
                 .dot.is-active {
@@ -1370,6 +1362,7 @@ body {
                             padding-left: 8px;
                         }
                         .control {
+                            position: relative;
                             input {
                                 border: none;
                                 height: 30px;
@@ -1381,11 +1374,35 @@ body {
                                 padding-right: calc(0.75em - 1px);
                                 padding-top: calc(0.5em - 1px);
                                 width: 100%;
-                                &::placeholder{
-                                    color: #C0C0C0
+                                &::placeholder {
+                                    color: #c0c0c0;
                                 }
                                 &:focus {
                                     outline: none;
+                                }
+                            }
+                            .pass-vision-icon {
+                                position: absolute;
+                                top: -7px;
+                                right: 0;
+                                height: 40px;
+                                width: 40px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                i {
+                                    font-size: 18px;
+                                    color: #cecece;
+                                    transition: all 0.3s;
+                                    cursor: pointer;
+                                    display: none;
+                                    transition: color 0.3s;
+                                    &:hover {
+                                        color: #7fa9de;
+                                    }
+                                }
+                                .reg-vision-on-icon {
+                                    display: none;
                                 }
                             }
                         }
@@ -1394,33 +1411,49 @@ body {
                         }
                     }
                 }
-                .buttons {
-                    padding: 20px 0;
+                .actions-wrapper {
                     display: flex;
+                    padding: 20px 0;
                     align-items: center;
-                    justify-content: flex-end;
-                    button {
-                        border: 1px solid transparent;
-                        outline: none;
-                        min-width: 90px;
-                        border-radius: 1000px;
-                        font-size: 0.8rem;
-                        font-weight: 500;
-                        transition: all 0.3s;
-                        background-color: #fff;
-                        border-color: #dbdbdb;
-                        border-width: 1px;
-                        color: #363636;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        height: 3.5em;
-                        &:hover {
-                            border-color: #b5b5b5;
-                            color: #363636;
+                    .account-link {
+                        a {
+                            text-decoration: none;
+                            font-size: 1rem;
+                            color: #abb0be;
+                            transition: color 0.3s;
+                            &:hover {
+                                color: #3d70b2;
+                            }
                         }
-                        &:not(:last-child) {
-                            margin-right: 0.5rem;
+                    }
+                    .buttons {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        margin-left: auto;
+                        button {
+                            border: 1px solid transparent;
+                            outline: none;
+                            min-width: 90px;
+                            border-radius: 1000px;
+                            font-size: 0.8rem;
+                            font-weight: 500;
+                            transition: all 0.3s;
+                            background-color: #fff;
+                            border-color: #dbdbdb;
+                            border-width: 1px;
+                            color: #363636;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 3.5em;
+                            &:hover {
+                                border-color: #b5b5b5;
+                                color: #363636;
+                            }
+                            &:not(:last-child) {
+                                margin-right: 0.5rem;
+                            }
                         }
                     }
                 }
@@ -1473,6 +1506,22 @@ body {
             }
         }
     }
+    #register {
+        .outer-panel {
+            .outer-panel-inner {
+                .process-panel-wrap {
+                    .container {
+                        .row {
+                            .welcoming-card {
+                                min-height: 319px;
+                                max-height: 319px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media (max-width: 767px) {
     #login {
@@ -1481,6 +1530,23 @@ body {
                 .right-side {
                     .form-wrapper {
                         min-width: 320px;
+                    }
+                }
+            }
+        }
+    }
+    #register {
+        .outer-panel {
+            .outer-panel-inner {
+                .process-panel-wrap {
+                    .container {
+                        .row {
+                            .welcoming-card {
+                                min-height: auto;
+                                height: auto;
+                                margin-top: 10px;
+                            }
+                        }
                     }
                 }
             }
@@ -1551,6 +1617,24 @@ body {
                         min-width: 90%;
                         .res-logo {
                             width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #register {
+        .outer-panel {
+            .outer-panel-inner {
+                .process-panel-wrap {
+                    .container {
+                        .row {
+                            .actions-wrapper {
+                                flex-direction: column;
+                                .buttons{
+                                    margin: 0;
+                                }
+                            }
                         }
                     }
                 }
