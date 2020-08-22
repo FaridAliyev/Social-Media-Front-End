@@ -285,4 +285,8 @@ $(document).ready(function () {
     $('#reg-confirm-pass').on("cut copy paste",function(e) {
         e.preventDefault();
     });
+
+    // profile
+
+    
 });

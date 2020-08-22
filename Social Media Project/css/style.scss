@@ -36,7 +36,7 @@ body {
 }
 
 .action-btn {
-    font-weight: 600;
+    font-weight: 500;
     padding: 5px 9px;
     outline: none !important;
     border-radius: 5px;
@@ -623,16 +623,23 @@ body {
                                     }
                                 }
                             }
-                            .username {
+                            .user-info {
                                 padding: 0 10px;
-                                line-height: 1.1;
-                                font-size: 1rem;
-                                font-weight: 500;
-                                color: #393a4f;
-                                text-decoration: none;
-                                transition: color 0.3s;
-                                &:hover {
-                                    color: black;
+                                .username {
+                                    line-height: 1.1;
+                                    font-size: 1rem;
+                                    font-weight: 500;
+                                    color: #393a4f;
+                                    text-decoration: none;
+                                    transition: color 0.3s;
+                                    &:hover {
+                                        color: black;
+                                    }
+                                }
+                                .time {
+                                    font-size: 0.8rem;
+                                    color: #999;
+                                    display: block;
                                 }
                             }
                         }
@@ -1465,6 +1472,324 @@ body {
     }
 }
 
+// profile
+
+#profile {
+    padding-top: 71px;
+    #profile-cover {
+        .profile-cover-wrapper {
+            width: 100%;
+            img {
+                max-height: 300px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    #profile-info {
+        margin: 20px 0;
+        margin-bottom: 100px;
+        .container {
+            .row {
+                .left-side-wrapper {
+                    padding: 0 20px;
+                    position: relative;
+                    .profile-avatar {
+                        position: absolute;
+                        top: -80px;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        height: 130px;
+                        width: 130px;
+                        img {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            border: 4px solid #fff;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .right-side-wrapper {
+                    padding: 0 0 0 20px;
+                    .head {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .username {
+                            margin: 0;
+                            font-weight: 500;
+                            font-size: 1.4rem;
+                            color: #393a4f;
+                        }
+                    }
+                    .stats {
+                        padding: 1rem 0;
+                        a {
+                            font-size: 0.9rem;
+                            color: #abb0be;
+                            text-decoration: none;
+                        }
+                        span {
+                            font-size: 0.9rem;
+                            color: #abb0be;
+                            padding-right: 30px;
+                        }
+                    }
+                    .bio {
+                        h4 {
+                            font-size: 1.2rem;
+                            color: #393a4f;
+                        }
+                        p {
+                            max-width: 480px;
+                            margin: 0;
+                            font-size: 0.9rem;
+                            color: #393a4f;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #profile-posts {
+        .container {
+            border-top: 1px solid #dbdbdb;
+            .row {
+                padding-top: 45px;
+                .profile-timeline-heading {
+                    width: 100%;
+                    padding: 8px;
+                    border-radius: 6px;
+                    border: 1px solid #e8e8e8;
+                    background: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    h4 {
+                        margin: 0;
+                        font-weight: 500;
+                        padding: 0 6px;
+                        font-size: 16px;
+                    }
+                    .button-wrapper {
+                        button {
+                            border: 1px solid transparent;
+                            width: 90px;
+                            font-size: 0.8rem;
+                            transition: all 0.3s;
+                            background-color: #fff;
+                            border-color: #dbdbdb;
+                            border-width: 1px;
+                            color: #363636;
+                            padding: 9px 9px;
+                        }
+                        .post-order-active{
+                            color: #5596e6;
+                            border-color: #5596e6;
+                        }
+                    }
+                }
+                .feed-post {
+                    position: relative;
+                    margin-bottom: 1.5rem;
+                    border: 1px solid #e8e8e8;
+                    background: #fff;
+                    border-radius: 6px;
+                    color: #4a4a4a;
+                    .content-wrapper {
+                        .post-card-header {
+                            padding: 16px 16px 0 16px;
+                            display: flex;
+                            .user-block {
+                                display: flex;
+                                align-items: center;
+                                .pPL {
+                                    .profile-pic {
+                                        img {
+                                            height: 42px;
+                                            width: 42px;
+                                            border-radius: 50%;
+                                        }
+                                    }
+                                }
+                                .user-info {
+                                    padding: 0 10px;
+                                    .username {
+                                        line-height: 1.1;
+                                        font-size: 1rem;
+                                        font-weight: 500;
+                                        color: #393a4f;
+                                        text-decoration: none;
+                                        transition: color 0.3s;
+                                        &:hover {
+                                            color: black;
+                                        }
+                                    }
+                                    .time {
+                                        font-size: 0.8rem;
+                                        color: #999;
+                                        display: block;
+                                    }
+                                }
+                            }
+                            .dropdown {
+                                margin-left: auto;
+                                position: relative;
+                                .button {
+                                    padding: 0;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    align-items: center;
+                                    height: 32px;
+                                    width: 32px;
+                                    border: none;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    transition: background 0.3s;
+                                    i {
+                                        font-size: 18px;
+                                        color: #888da8;
+                                    }
+                                    &:hover {
+                                        background: #f5f5f5;
+                                    }
+                                }
+                            }
+                        }
+                        .post-card-body {
+                            padding: 16px 16px 0 16px;
+                            .post-text {
+                                p {
+                                    color: #757a91;
+                                    font-size: 0.9rem;
+                                }
+                            }
+                            .post-image {
+                                position: relative;
+                                margin: 10px 0;
+                                height: 400px;
+                                a {
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: scale-down;
+                                    }
+                                }
+                            }
+                        }
+                        .post-card-footer {
+                            padding: 16px;
+                            .actions {
+                                display: flex;
+                                color: #262626;
+                                .like {
+                                    margin-right: 13px;
+                                    i {
+                                        font-size: 30px;
+                                        cursor: pointer;
+                                    }
+                                    .liked {
+                                        color: red;
+                                        display: none;
+                                    }
+                                }
+                                .comment {
+                                    a {
+                                        i {
+                                            font-size: 30px;
+                                            color: #262626;
+                                        }
+                                    }
+                                }
+                                .bookmark {
+                                    margin-left: auto;
+                                    i {
+                                        font-size: 30px;
+                                        cursor: pointer;
+                                    }
+                                    .bookmarked {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            .post-info {
+                                display: flex;
+                                padding-top: 10px;
+                                .likers-group {
+                                    display: flex;
+                                    img {
+                                        height: 38px;
+                                        width: 38px;
+                                        border-radius: 50%;
+                                        border: 3px solid #fff;
+                                        &:not(:first-child) {
+                                            margin-left: -12px;
+                                        }
+                                    }
+                                }
+                                .likers-text {
+                                    margin-left: 10px;
+                                    line-height: 1.4;
+                                    p {
+                                        margin: 0;
+                                        font-size: 0.8rem;
+                                        color: #888da8;
+                                        a {
+                                            color: #393a4f;
+                                            font-weight: 500;
+                                            text-decoration: none;
+                                            transition: color 0.3s;
+                                            &:hover {
+                                                color: $blue;
+                                            }
+                                        }
+                                    }
+                                }
+                                .social-count {
+                                    margin-left: auto;
+                                    display: flex;
+                                    align-items: center;
+                                    .likes-count {
+                                        margin: 0 3px;
+                                        display: flex;
+                                        i {
+                                            color: #888da8;
+                                            font-size: 18px;
+                                        }
+                                        span {
+                                            font-size: 0.9rem;
+                                            color: #888da8;
+                                            margin: 0 5px;
+                                        }
+                                    }
+                                    .comments-count {
+                                        margin: 0 3px;
+                                        display: flex;
+                                        i {
+                                            color: #888da8;
+                                            font-size: 18px;
+                                        }
+                                        span {
+                                            font-size: 0.9rem;
+                                            color: #888da8;
+                                            margin: 0 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 991px) {
     #navbar {
         .container {
@@ -1631,7 +1956,7 @@ body {
                         .row {
                             .actions-wrapper {
                                 flex-direction: column;
-                                .buttons{
+                                .buttons {
                                     margin: 0;
                                 }
                             }
