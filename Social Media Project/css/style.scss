@@ -280,8 +280,7 @@ body {
                             right: -70px;
                             top: 60px;
                             background: white;
-                            border-bottom-left-radius: 10px;
-                            border-top-left-radius: 10px;
+                            border-radius: 10px;
                             .follow-request-item {
                                 width: 100%;
                                 background: white;
@@ -1476,6 +1475,7 @@ body {
 
 #profile {
     padding-top: 71px;
+    background: #f4f4f4;
     #profile-cover {
         .profile-cover-wrapper {
             width: 100%;
@@ -1554,11 +1554,254 @@ body {
             }
         }
     }
-    #profile-posts {
+    #profile-content {
         .container {
             border-top: 1px solid #dbdbdb;
             .row {
                 padding-top: 45px;
+                .separator {
+                    border-right: 2px solid #e5e5e5;
+                }
+                .followed-by-wrapper {
+                    .box-heading {
+                        width: 100%;
+                        padding: 8px;
+                        border-radius: 6px;
+                        border: 1px solid #e8e8e8;
+                        background: #fff;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        h4 {
+                            margin: 0;
+                            font-weight: 500;
+                            padding: 0 6px;
+                            font-size: 16px;
+                        }
+                        .followed-by-dropdown {
+                            position: relative;
+                            .fbd-collapse-button {
+                                width: 38px;
+                                height: 38px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                                i {
+                                    color: #888da8;
+                                    font-size: 20px;
+                                }
+                            }
+                            .fbd-menu {
+                                display: none;
+                                box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
+                                border-color: #e8e8e8;
+                                padding-top: 0;
+                                min-width: 280px;
+                                position: absolute;
+                                top: 100%;
+                                z-index: 20;
+                                left: auto;
+                                right: 0;
+                                .fbd-content {
+                                    border: 1px solid #e8e8e8;
+                                    box-shadow: none;
+                                    background-color: #fff;
+                                    border-radius: 4px;
+                                    .fbd-item {
+                                        padding-right: 1rem !important;
+                                        padding: 0.5rem 1rem;
+                                        color: #4a4a4a;
+                                        display: block;
+                                        font-size: 0.875rem;
+                                        text-decoration: none;
+                                        transition: all 0.3s;
+                                        .media {
+                                            display: flex;
+                                            align-items: center;
+                                            i {
+                                                font-size: 18px;
+                                                margin-right: 10px;
+                                                color: #757a91;
+                                            }
+                                            .media-content {
+                                                line-height: 1.2;
+                                                h3 {
+                                                    margin: 0;
+                                                    font-weight: 500;
+                                                    font-size: 0.85rem;
+                                                    color: #393a4f;
+                                                    line-height: 1.2;
+                                                }
+                                                small {
+                                                    color: #abb0be;
+                                                    font-size: 0.875em;
+                                                }
+                                            }
+                                        }
+                                        &:hover {
+                                            background: #fafafa;
+                                        }
+                                    }
+                                }
+                            }
+                            .pd-menu-active {
+                                display: block;
+                            }
+                        }
+                    }
+                    .fb-cards-list {
+                        padding-top: 10px;
+                        .fb-card {
+                            position: relative;
+                            margin-bottom: 1.5rem;
+                            border: 1px solid #e8e8e8;
+                            background: #fff;
+                            border-radius: 6px;
+                            color: #4a4a4a;
+                            .fb-item {
+                                padding: 12px;
+                                display: flex;
+                                align-items: center;
+                                &:not(:last-child) {
+                                    border-bottom: 1px solid #e8e8e8;
+                                }
+                                img {
+                                    display: block;
+                                    height: 44px;
+                                    width: 44px;
+                                    border-radius: 50%;
+                                    object-fit: cover;
+                                }
+                                .text-content {
+                                    margin: 0 10px;
+                                    .username {
+                                        font-weight: 500;
+                                        font-size: 0.9rem;
+                                        color: #393a4f;
+                                        display: block;
+                                        text-decoration: none;
+                                    }
+                                    span {
+                                        font-size: 0.75rem;
+                                        color: #999;
+                                        display: block;
+                                    }
+                                }
+                                .button-wrapper {
+                                    margin-left: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+                .photos-wrapper {
+                    .box-heading {
+                        width: 100%;
+                        padding: 8px;
+                        border-radius: 6px;
+                        border: 1px solid #e8e8e8;
+                        background: #fff;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        h4 {
+                            margin: 0;
+                            font-weight: 500;
+                            padding: 0 6px;
+                            font-size: 16px;
+                        }
+                        .photos-dropdown {
+                            position: relative;
+                            .pd-collapse-button {
+                                width: 38px;
+                                height: 38px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                                i {
+                                    color: #888da8;
+                                    font-size: 20px;
+                                }
+                            }
+                            .pd-menu {
+                                display: none;
+                                box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
+                                border-color: #e8e8e8;
+                                padding-top: 0;
+                                min-width: 280px;
+                                position: absolute;
+                                top: 100%;
+                                z-index: 20;
+                                left: auto;
+                                right: 0;
+                                .pd-content {
+                                    border: 1px solid #e8e8e8;
+                                    box-shadow: none;
+                                    background-color: #fff;
+                                    border-radius: 4px;
+                                    .pd-item {
+                                        padding-right: 1rem !important;
+                                        padding: 0.5rem 1rem;
+                                        color: #4a4a4a;
+                                        display: block;
+                                        font-size: 0.875rem;
+                                        text-decoration: none;
+                                        transition: all 0.3s;
+                                        .media {
+                                            display: flex;
+                                            align-items: center;
+                                            i {
+                                                font-size: 18px;
+                                                margin-right: 10px;
+                                                color: #757a91;
+                                            }
+                                            .media-content {
+                                                line-height: 1.2;
+                                                h3 {
+                                                    margin: 0;
+                                                    font-weight: 500;
+                                                    font-size: 0.85rem;
+                                                    color: #393a4f;
+                                                    line-height: 1.2;
+                                                }
+                                                small {
+                                                    color: #abb0be;
+                                                    font-size: 0.875em;
+                                                }
+                                            }
+                                        }
+                                        &:hover {
+                                            background: #fafafa;
+                                        }
+                                    }
+                                }
+                            }
+                            .pd-menu-active {
+                                display: block;
+                            }
+                        }
+                    }
+                    .photos {
+                        padding: 10px 0 20px 0;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        img {
+                            display: block;
+                            width: calc(25% - 6px);
+                            margin-bottom: 12px;
+                            object-fit: cover;
+                            border-radius: 4px;
+                            transition: all 0.3s;
+                            &:hover {
+                                box-shadow: 0px 15px 32px rgba(0, 0, 0, 0.18) !important;
+                            }
+                        }
+                    }
+                }
                 .profile-timeline-heading {
                     width: 100%;
                     padding: 8px;
@@ -1586,8 +1829,12 @@ body {
                             border-width: 1px;
                             color: #363636;
                             padding: 9px 9px;
+                            &:not(.post-order-active):hover {
+                                border-color: #b5b5b5;
+                                color: #363636;
+                            }
                         }
-                        .post-order-active{
+                        .post-order-active {
                             color: #5596e6;
                             border-color: #5596e6;
                         }
@@ -1847,6 +2094,17 @@ body {
             }
         }
     }
+    #profile {
+        #profile-content {
+            .container {
+                .row {
+                    .separator {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 @media (max-width: 767px) {
     #login {
@@ -1872,6 +2130,18 @@ body {
                                 margin-top: 10px;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    #profile {
+        #profile-info {
+            .container {
+                .row {
+                    .left-side-wrapper {
+                        min-height: 45px;
+                        margin-bottom: 9px;
                     }
                 }
             }

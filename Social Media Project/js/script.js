@@ -288,5 +288,9 @@ $(document).ready(function () {
 
     // profile
 
+    $('.pd-collapse-button').click(function(){
+        $(this).next().toggleClass('pd-menu-active');
+    });
+
     
 });
