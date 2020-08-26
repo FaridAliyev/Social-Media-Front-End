@@ -14,7 +14,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Post Details | Perivallo</title>
+    <title>Perivallo | Followers</title>
 </head>
 <body>
     
@@ -187,161 +187,104 @@
         </div>
     </nav>
 
-    <main id="post-details">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-12">
-                    <div class="feed-post">
-                        <div class="content-wrapper">
-                            <div class="post-card-header">
-                                <div class="user-block">
-                                    <a class="pPL" href="#">
-                                        <div class="profile-pic">
-                                            <img src="img/profile-placeholder.png" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="user-info">
-                                        <a href="#" class="username">_farid__aliyev_</a>
-                                        <span class="time">July 26 2018, 01:03pm</span>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <div class="button">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </div>
-                                </div>
+    <main id="profile">
+        <section id="profile-cover">
+            <div class="profile-cover-wrapper">
+                <img src="img/cover.png" alt="Cover">
+            </div>
+        </section>
+        <section id="profile-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="left-side-wrapper">
+                            <div class="profile-avatar">
+                                <img src="img/profile-placeholder.png" alt="Profile Picture">
                             </div>
-                            <div class="post-card-body">
-                                <div class="post-text">
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas fugit sit
-                                        architecto nostrum veritatis ullam doloribus impedit earum aut omnis?</p>
-                                </div>
-                                <!-- <div class="post-image">
-                                    <a href="#">
-                                        <img src="img/1.jpg" alt="">
-                                    </a>
-                                </div> -->
-                                <div class="owl-carousel owl-theme post-owl-carousel">
-                                    <div class="item">
-                                        <div class="post-image">
-                                            <a href="#">
-                                                <img src="img/1.jpg" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="post-image">
-                                            <a href="#">
-                                                <img src="img/logo-blue.png" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-card-footer">
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12">
+                        <div class="right-side-wrapper">
+                            <div class="head">
+                                <h2 class="username">_farid__aliyev_</h2>
                                 <div class="actions">
-                                    <div class="like">
-                                        <i class="far fa-heart prelike"></i>
-                                        <i class="fas fa-heart liked"></i>
-                                    </div>
-                                    <div class="comment">
-                                        <a href="#">
-                                            <i class="far fa-comment"></i>
-                                        </a>
-                                    </div>
-                                    <div class="bookmark">
-                                        <i class="far fa-bookmark prebookmark"></i>
-                                        <i class="fas fa-bookmark bookmarked"></i>
-                                    </div>
-                                </div>
-                                <div class="post-info">
-                                    <div class="likers-group">
-                                        <img src="img/profile-placeholder.png" alt="">
-                                        <img src="img/profile-placeholder.png" alt="">
-                                    </div>
-                                    <div class="likers-text">
-                                        <p>
-                                            <a href="#">Milly</a>
-                                            ,
-                                            <a href="#">David</a>
-                                        </p>
-                                        <p>and 23 more liked this</p>
-                                    </div>
-                                    <div class="social-count">
-                                        <div class="likes-count">
-                                            <i class="far fa-heart"></i>
-                                            <span>27</span>
-                                        </div>
-                                        <div class="comments-count">
-                                            <i class="far fa-comment"></i>
-                                            <span>3</span>
-                                        </div>
-                                    </div>
+                                    <button type="button" class="action-btn follow-button">Follow</button>
                                 </div>
                             </div>
-                            <div class="post-compose">
-                                <form action="#">
-                                    <div class="control">
-                                        <textarea id="comment-publish" placeholder="Post a comment..."></textarea>
-                                    </div>
-                                    <div class="compose-controls">
-                                        <img src="img/profile-placeholder.png" alt="">
-                                        <button type="submit">Post Comment</button>
-                                    </div>
-                                </form>
+                            <div class="stats">
+                                <span>174 Posts</span>
+                                <span><a href="#">12K Followers</a></span>
+                                <span><a href="#">104 Following</a></span>
                             </div>
-                            <div class="comments-wrapper">
-                                <div class="comments-count">
-                                    <h3>Comments (9)</h3>
-                                </div>
-                                <div class="comment">
-                                    <div class="comment-left">
-                                        <div class="avatar-wrapper">
-                                            <img src="img/profile-placeholder.png" alt="Profile Picture">
-                                        </div>
-                                    </div>
-                                    <div class="comment-content">
-                                        <div class="comments-meta">
-                                            <h4>
-                                                <a href="#" class="username">_farid__aliyev_</a>
-                                                <small> · 3 hours ago</small>
-                                            </h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.</p>
-                                        </div>
-                                        <div class="comment-stats-wrapper">
-                                            <div class="comment-stats">
-                                                <div class="likes">
-                                                    <i class="far fa-thumbs-up"></i>
-                                                    <span>23</span>
-                                                </div>
-                                                <div class="dislikes">
-                                                    <i class="far fa-thumbs-down"></i>
-                                                    <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div class="comment-actions">
-                                                <div class="comment-action like">
-                                                    <i class="far fa-thumbs-up"></i>
-                                                </div>
-                                                <div class="comment-action dislike">
-                                                    <i class="far fa-thumbs-down"></i>
-                                                </div>
-                                                <div class="comment-action comment-icon">
-                                                    <i class="far fa-comment"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="nested-replies"></div> -->
-                                    </div>
-                                </div>
+                            <div class="bio">
+                                <h4>Farid Aliyev</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iam enim adesse poterit.
+                                    Quis est tam dissimile homini. At ille pellit, qui permulcet sensum voluptate. Vide,
+                                    quaeso, rectumne sit. Primum quid tu dicis breve?</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <sectiion id="profile-followers">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="box-heading">
+                            <div class="text">
+                                <h3>Followers</h3>
+                            </div>
+                            <div class="heading-search">
+                                <input type="text" placeholder="Search Followers...">
+                                <div class="fsearch-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row f-row">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <a href="#" class="follower-item">
+                            <div class="avatar-wrapper">
+                                <img src="img/profile-placeholder.png" alt="Profile Picture">
+                            </div>
+                            <h3 class="username">_farid__aliyev_</h3>
+                            <p class="name">Farid Aliyev</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <a href="#" class="follower-item">
+                            <div class="avatar-wrapper">
+                                <img src="img/profile-placeholder.png" alt="Profile Picture">
+                            </div>
+                            <h3 class="username">_farid__aliyev_</h3>
+                            <p class="name">Farid Aliyev</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <a href="#" class="follower-item">
+                            <div class="avatar-wrapper">
+                                <img src="img/profile-placeholder.png" alt="Profile Picture">
+                            </div>
+                            <h3 class="username">_farid__aliyev_</h3>
+                            <p class="name">Farid Aliyev</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <a href="#" class="follower-item">
+                            <div class="avatar-wrapper">
+                                <img src="img/profile-placeholder.png" alt="Profile Picture">
+                            </div>
+                            <h3 class="username">_farid__aliyev_</h3>
+                            <p class="name">Farid Aliyev</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </sectiion>
     </main>
-
 
     <script src="https://kit.fontawesome.com/bd3d602acc.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -1476,6 +1476,7 @@ body {
 #profile {
     padding-top: 71px;
     background: #f4f4f4;
+    min-height: 100vh;
     #profile-cover {
         .profile-cover-wrapper {
             width: 100%;
@@ -2036,6 +2037,111 @@ body {
             }
         }
     }
+    #profile-followers {
+        .container {
+            .row {
+                .box-heading {
+                    width: 100%;
+                    padding: 8px;
+                    border-radius: 6px;
+                    border: 1px solid #e8e8e8;
+                    background: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .text {
+                        margin-left: 5px;
+                        h3 {
+                            margin: 0;
+                            font-size: 16px;
+                        }
+                    }
+                    .heading-search {
+                        position: relative;
+                        input {
+                            outline: none;
+                            border: 1px solid transparent;
+                            padding-left: 38px;
+                            border-radius: 1000px;
+                            padding-right: calc(calc(0.75em - 1px) + 0.375em);
+                            padding-bottom: calc(0.5em - 1px);
+                            padding-top: calc(0.5em - 1px);
+                            font-size: 0.9rem;
+                            height: 36px;
+                            transition: all 0.3s;
+                            background-color: #fff;
+                            border-color: #dbdbdb;
+                            color: #363636;
+                            &::placeholder {
+                                color: #c0c0c0;
+                            }
+                            &:focus {
+                                border-color: #5596e6;
+                            }
+                            &:focus + .fsearch-icon i {
+                                color: #5596e6;
+                            }
+                        }
+                        .fsearch-icon {
+                            position: absolute;
+                            top: 0;
+                            left: 2px;
+                            height: 36px;
+                            width: 36px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            i {
+                                font-size: 16px;
+                                color: #cecece;
+                                transition: color 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+            .f-row {
+                padding-top: 20px;
+                .follower-item {
+                    display: block;
+                    width: 100%;
+                    padding: 30px;
+                    border: 1px solid #e8e8e8;
+                    border-radius: 6px;
+                    background: #fff;
+                    transition: all 0.3s;
+                    text-decoration: none;
+                    text-align: center;
+                    margin-bottom: 0.5rem;
+                    .avatar-wrapper {
+                        height: 80px;
+                        width: 80px;
+                        margin: 0 auto;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                    }
+                    .username {
+                        margin: 0;
+                        font-family: "Montserrat", sans-serif;
+                        color: #393a4f;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        line-height: 1.2;
+                        margin-top: 6px;
+                    }
+                    .name {
+                        margin: 0;
+                        color: #999;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // post-details
@@ -2126,6 +2232,8 @@ body {
                             margin: 10px 0;
                             height: 400px;
                             a {
+                                display: block;
+                                height: 100%;
                                 img {
                                     width: 100%;
                                     height: 100%;
@@ -2295,6 +2403,151 @@ body {
                                         box-shadow: 0 14px 26px -12px rgba(85, 150, 230, 0.42),
                                             0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(85, 150, 230, 0.2) !important;
                                         opacity: 0.8;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .comments-wrapper {
+                        padding: 12px;
+                        line-height: 1.5;
+                        .comments-count {
+                            h3 {
+                                margin: 0;
+                                font-weight: normal;
+                                font-size: 18px;
+                            }
+                        }
+                        .comment {
+                            padding: 16px 0;
+                            display: flex;
+                            align-items: flex-start;
+                            .comment-left {
+                                margin-right: 1rem;
+                                .avatar-wrapper {
+                                    width: 44px;
+                                    height: 44px;
+                                    min-width: 44px;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+                            .comment-content {
+                                .comments-meta {
+                                    h4 {
+                                        margin: 0;
+                                        font-weight: normal;
+                                        .username {
+                                            font-weight: 600;
+                                            font-size: 0.9rem;
+                                            color: #393a4f;
+                                            transition: color 0.3s;
+                                            text-decoration: none;
+                                            &:hover {
+                                                color: #5596e6;
+                                            }
+                                        }
+                                        small {
+                                            color: #999;
+                                            font-size: 0.85rem;
+                                        }
+                                    }
+                                    p {
+                                        margin: 0;
+                                        max-width: 640px;
+                                        font-size: 0.95rem;
+                                        color: #6a6c93;
+                                    }
+                                }
+                            }
+                            .comment-stats-wrapper {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 4px 0;
+                                .comment-stats {
+                                    display: flex;
+                                    .likes {
+                                        display: flex;
+                                        align-items: center;
+                                        padding: 0 4px;
+                                        i {
+                                            color: #cecece;
+                                            font-size: 18px;
+                                            position: relative;
+                                            top: -2px;
+                                        }
+                                        span {
+                                            display: block;
+                                            font-size: 0.9rem;
+                                            color: #999;
+                                        }
+                                    }
+                                    .dislikes {
+                                        display: flex;
+                                        align-items: center;
+                                        padding: 0 4px;
+                                        i {
+                                            color: #cecece;
+                                            font-size: 18px;
+                                            position: relative;
+                                            top: 2px;
+                                        }
+                                        span {
+                                            display: block;
+                                            font-size: 0.9rem;
+                                            color: #999;
+                                        }
+                                    }
+                                }
+                                .comment-actions {
+                                    display: flex;
+                                    align-items: center;
+                                    .comment-action {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 30px;
+                                        width: 30px;
+                                        min-width: 30px;
+                                        margin: 0 2px;
+                                        border: 1px solid #e8e8e8;
+                                        border-radius: 50%;
+                                        transition: all 0.3s;
+                                        cursor: pointer;
+                                        i {
+                                            color: #cecece;
+                                            transition: color 0.3s;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                    .like {
+                                        &:hover {
+                                            border-color: #1ce589;
+                                            i {
+                                                color: #1ce589;
+                                            }
+                                        }
+                                    }
+                                    .dislike {
+                                        &:hover {
+                                            border-color: #f71416;
+                                            i {
+                                                color: #f71416;
+                                            }
+                                        }
+                                    }
+                                    .comment-icon {
+                                        &:hover {
+                                            border-color: #393a4f;
+                                            i {
+                                                color: #393a4f;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -2516,6 +2769,24 @@ body {
                                     margin: 0;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 347px) {
+    #profile {
+        #profile-followers {
+            .container {
+                .row {
+                    .box-heading {
+                        flex-direction: column;
+                        justify-content: center;
+                        .heading-search {
+                            margin-top: 5px;
                         }
                     }
                 }
