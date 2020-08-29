@@ -211,6 +211,35 @@
                                 <h2 class="username">_farid__aliyev_</h2>
                                 <div class="actions">
                                     <button type="button" class="action-btn follow-button">Follow</button>
+                                    <div class="profile-dropdown">
+                                        <div class="profile-dropdown-button">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </div>
+                                        <div class="profile-dropdown-menu">
+                                            <div class="dropdown-content">
+                                                <a href="#" class="profile-dropdown-item">
+                                                    <div class="media">
+                                                        <i class="fas fa-ban"></i>
+                                                        <div class="media-content">
+                                                            <h3>Block</h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="profile-dropdown-item">
+                                                    <div class="media">
+                                                        <i class="far fa-flag"></i>
+                                                        <div class="media-content">
+                                                            <h3>Report</h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="profile-settings-button" data-toggle="modal"
+                                        data-target="#settings-modal">
+                                        <i class="fas fa-cog"></i>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="stats">
@@ -346,9 +375,29 @@
                                             <span class="time">July 26 2018, 01:03pm</span>
                                         </div>
                                     </div>
-                                    <div class="dropdown">
+                                    <div class="post-dropdown">
                                         <div class="button">
                                             <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+                                        <div class="post-dropdown-menu">
+                                            <div class="dropdown-content">
+                                                <a href="#" class="post-dropdown-item">
+                                                    <div class="media">
+                                                        <i class="far fa-flag"></i>
+                                                        <div class="media-content">
+                                                            <h3>Report</h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="post-dropdown-item">
+                                                    <div class="media">
+                                                        <i class="far fa-trash-alt"></i>
+                                                        <div class="media-content">
+                                                            <h3>Delete</h3>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -426,7 +475,39 @@
                 </div>
             </div>
         </section>
+
+        <div id="settings-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Settings</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="setting-button">
+                                        <a href="#">Edit Profile</a>
+                                    </div>
+                                    <div class="setting-button">
+                                        <a href="#">Log Out</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+
 
 
 

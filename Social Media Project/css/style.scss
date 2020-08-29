@@ -72,6 +72,10 @@ body {
     color: rgba(var(--f75, 38, 38, 38), 1);
 }
 
+.post-dropdown-active {
+    display: block !important;
+}
+
 // feed
 
 #navbar {
@@ -642,7 +646,7 @@ body {
                                 }
                             }
                         }
-                        .dropdown {
+                        .post-dropdown {
                             margin-left: auto;
                             position: relative;
                             .button {
@@ -663,6 +667,58 @@ body {
                                 }
                                 &:hover {
                                     background: #f5f5f5;
+                                }
+                            }
+                            .post-dropdown-menu {
+                                box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
+                                border-color: #e8e8e8;
+                                min-width: 280px;
+                                position: absolute;
+                                top: 100%;
+                                z-index: 20;
+                                right: 0;
+                                left: auto;
+                                color: #4a4a4a;
+                                display: none;
+                                .dropdown-content {
+                                    border: 1px solid #e8e8e8;
+                                    background-color: #fff;
+                                    border-radius: 4px;
+                                    .post-dropdown-item {
+                                        padding-right: 1rem;
+                                        padding: 0.5rem 1rem;
+                                        color: #4a4a4a;
+                                        display: block;
+                                        font-size: 0.875rem;
+                                        line-height: 1.5;
+                                        position: relative;
+                                        width: 100%;
+                                        text-decoration: none;
+                                        transition: all 0.3s;
+                                        .media {
+                                            display: flex;
+                                            align-items: center;
+                                            i {
+                                                font-size: 18px;
+                                                margin-right: 10px;
+                                                color: #757a91;
+                                            }
+                                            .media-content {
+                                                line-height: 1.2;
+                                                h3 {
+                                                    margin: 0;
+                                                    font-weight: 600;
+                                                    font-size: 0.85rem;
+                                                    color: #393a4f;
+                                                    line-height: 1.2;
+                                                    font-family: "Montserrat", sans-serif;
+                                                }
+                                            }
+                                        }
+                                        &:hover {
+                                            background: #fafafa;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1525,6 +1581,88 @@ body {
                             font-size: 1.4rem;
                             color: #393a4f;
                         }
+                        .actions {
+                            display: flex;
+                            align-items: center;
+                            .profile-dropdown{
+                                position: relative;
+                                .profile-dropdown-button {
+                                    margin-left: 10px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    cursor: pointer;
+                                    i {
+                                        font-size: 25px;
+                                    }
+                                }
+                                .profile-dropdown-menu{
+                                    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
+                                    border-color: #e8e8e8;
+                                    min-width: 280px;
+                                    position: absolute;
+                                    top: 32px;
+                                    z-index: 20;
+                                    right: 0;
+                                    left: auto;
+                                    color: #4a4a4a;
+                                    display: none;
+                                    .dropdown-content {
+                                        border: 1px solid #e8e8e8;
+                                        background-color: #fff;
+                                        border-radius: 4px;
+                                        .profile-dropdown-item {
+                                            padding-right: 1rem;
+                                            padding: 0.5rem 1rem;
+                                            color: #4a4a4a;
+                                            display: block;
+                                            font-size: 0.875rem;
+                                            line-height: 1.5;
+                                            position: relative;
+                                            width: 100%;
+                                            text-decoration: none;
+                                            transition: all 0.3s;
+                                            .media {
+                                                display: flex;
+                                                align-items: center;
+                                                i {
+                                                    font-size: 18px;
+                                                    margin-right: 10px;
+                                                    color: #ff2400;
+                                                }
+                                                .media-content {
+                                                    line-height: 1.2;
+                                                    h3 {
+                                                        margin: 0;
+                                                        font-weight: 600;
+                                                        font-size: 0.85rem;
+                                                        color: #ff2400;
+                                                        line-height: 1.2;
+                                                        font-family: "Montserrat", sans-serif;
+                                                    }
+                                                }
+                                            }
+                                            &:hover {
+                                                background: #fafafa;
+                                            }
+                                        }
+                                    }
+                                }
+                                .profile-dropdown-active{
+                                    display: block;
+                                }
+                            }
+                            .profile-settings-button {
+                                cursor: pointer;
+                                i {
+                                    font-size: 25px;
+                                    margin-left: 10px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                        }
                     }
                     .stats {
                         padding: 1rem 0;
@@ -1885,7 +2023,7 @@ body {
                                     }
                                 }
                             }
-                            .dropdown {
+                            .post-dropdown {
                                 margin-left: auto;
                                 position: relative;
                                 .button {
@@ -1906,6 +2044,58 @@ body {
                                     }
                                     &:hover {
                                         background: #f5f5f5;
+                                    }
+                                }
+                                .post-dropdown-menu {
+                                    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
+                                    border-color: #e8e8e8;
+                                    min-width: 280px;
+                                    position: absolute;
+                                    top: 100%;
+                                    z-index: 20;
+                                    right: 0;
+                                    left: auto;
+                                    color: #4a4a4a;
+                                    display: none;
+                                    .dropdown-content {
+                                        border: 1px solid #e8e8e8;
+                                        background-color: #fff;
+                                        border-radius: 4px;
+                                        .post-dropdown-item {
+                                            padding-right: 1rem;
+                                            padding: 0.5rem 1rem;
+                                            color: #4a4a4a;
+                                            display: block;
+                                            font-size: 0.875rem;
+                                            line-height: 1.5;
+                                            position: relative;
+                                            width: 100%;
+                                            text-decoration: none;
+                                            transition: all 0.3s;
+                                            .media {
+                                                display: flex;
+                                                align-items: center;
+                                                i {
+                                                    font-size: 18px;
+                                                    margin-right: 10px;
+                                                    color: #757a91;
+                                                }
+                                                .media-content {
+                                                    line-height: 1.2;
+                                                    h3 {
+                                                        margin: 0;
+                                                        font-weight: 600;
+                                                        font-size: 0.85rem;
+                                                        color: #393a4f;
+                                                        line-height: 1.2;
+                                                        font-family: "Montserrat", sans-serif;
+                                                    }
+                                                }
+                                            }
+                                            &:hover {
+                                                background: #fafafa;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -2142,6 +2332,40 @@ body {
             }
         }
     }
+    #settings-modal{
+        .modal-dialog{
+            .modal-content{
+                .modal-body{
+                    padding: 0;
+                    .container-fluid{
+                        .row{
+                            .setting-button{
+                                transition: all .3s;
+                                &:not(:last-child){
+                                    border-bottom: 1px solid #dbdbdb;
+                                }
+                                &:hover{
+                                    background: #ebe2e2;
+                                }
+                                a{
+                                    padding: 10px;
+                                    text-decoration: none;
+                                    color: black;
+                                    display: block;
+                                    width: 100%;
+                                }
+                                &:last-child{
+                                    a{
+                                        color: #ff2400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // post-details
@@ -2194,7 +2418,7 @@ body {
                                 }
                             }
                         }
-                        .dropdown {
+                        .post-dropdown {
                             margin-left: auto;
                             position: relative;
                             .button {
@@ -2215,6 +2439,58 @@ body {
                                 }
                                 &:hover {
                                     background: #f5f5f5;
+                                }
+                            }
+                            .post-dropdown-menu {
+                                box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
+                                border-color: #e8e8e8;
+                                min-width: 280px;
+                                position: absolute;
+                                top: 100%;
+                                z-index: 20;
+                                right: 0;
+                                left: auto;
+                                color: #4a4a4a;
+                                display: none;
+                                .dropdown-content {
+                                    border: 1px solid #e8e8e8;
+                                    background-color: #fff;
+                                    border-radius: 4px;
+                                    .post-dropdown-item {
+                                        padding-right: 1rem;
+                                        padding: 0.5rem 1rem;
+                                        color: #4a4a4a;
+                                        display: block;
+                                        font-size: 0.875rem;
+                                        line-height: 1.5;
+                                        position: relative;
+                                        width: 100%;
+                                        text-decoration: none;
+                                        transition: all 0.3s;
+                                        .media {
+                                            display: flex;
+                                            align-items: center;
+                                            i {
+                                                font-size: 18px;
+                                                margin-right: 10px;
+                                                color: #757a91;
+                                            }
+                                            .media-content {
+                                                line-height: 1.2;
+                                                h3 {
+                                                    margin: 0;
+                                                    font-weight: 600;
+                                                    font-size: 0.85rem;
+                                                    color: #393a4f;
+                                                    line-height: 1.2;
+                                                    font-family: "Montserrat", sans-serif;
+                                                }
+                                            }
+                                        }
+                                        &:hover {
+                                            background: #fafafa;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -2701,9 +2977,9 @@ body {
                 }
             }
         }
-        .n-row{
+        .n-row {
             margin-top: 10px;
-            .fr-cap{
+            .fr-cap {
                 font-family: "Montserrat", sans-serif;
                 color: #ff2400;
                 font-size: 1rem;
@@ -2711,7 +2987,7 @@ body {
                 margin-bottom: 3px;
                 display: block;
             }
-            .fr-card{
+            .fr-card {
                 width: 100%;
                 margin-bottom: 16px;
                 padding: 10px;
@@ -2719,40 +2995,40 @@ body {
                 background: #fff;
                 border-radius: 10px;
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-                .fr-card-item{
+                .fr-card-item {
                     display: flex;
                     align-items: center;
                     padding: 5px;
-                    .avatar-wrapper{
+                    .avatar-wrapper {
                         display: block;
                         height: 40px;
                         width: 40px;
-                        img{
+                        img {
                             height: 100%;
                             width: 100%;
                             border-radius: 50%;
                             object-fit: cover;
                         }
                     }
-                    .username{
+                    .username {
                         text-decoration: none;
                         color: #4a4a4a;
                         font-weight: 600;
                         margin-left: 5px;
                     }
-                    .action-buttons{
+                    .action-buttons {
                         margin-left: auto;
                     }
                 }
             }
-            .act-cap{
+            .act-cap {
                 color: #999;
                 font-size: 1rem;
                 margin-top: 10px;
                 margin-bottom: 3px;
                 display: block;
             }
-            .notification-card-wrapper{
+            .notification-card-wrapper {
                 width: 100%;
                 margin-bottom: 16px;
                 padding: 10px;
@@ -2760,17 +3036,17 @@ body {
                 background: #fff;
                 border-radius: 10px;
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-                .notification-card{
+                .notification-card {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    .avatar-wrapper{
+                    .avatar-wrapper {
                         margin-right: 5px;
-                        a{
+                        a {
                             display: block;
                             height: 40px;
                             width: 40px;
-                            img{
+                            img {
                                 width: 100%;
                                 height: 100%;
                                 border-radius: 50%;
@@ -2778,9 +3054,9 @@ body {
                             }
                         }
                     }
-                    .notification-meta{
+                    .notification-meta {
                         margin-left: 5px;
-                        .username{
+                        .username {
                             text-decoration: none;
                             font-size: 16px;
                             color: #393a4f;
@@ -2788,23 +3064,23 @@ body {
                             font-weight: 500;
                             line-height: 1.2;
                         }
-                        .action{
+                        .action {
                             margin: 0;
                             color: #999;
                             font-size: 0.8rem;
                         }
                     }
-                    .image{
+                    .image {
                         width: 50px;
                         height: 50px;
                         margin-left: auto;
-                        img{
+                        img {
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
                         }
                     }
-                    .button-wrapper{
+                    .button-wrapper {
                         margin-left: auto;
                     }
                 }
@@ -3029,14 +3305,33 @@ body {
             }
         }
     }
-    #notifications{
-        .container{
-            .n-row{
-                .fr-card{
-                    .fr-card-item{
+    #notifications {
+        .container {
+            .n-row {
+                .fr-card {
+                    .fr-card-item {
                         flex-direction: column;
-                        .action-buttons{
+                        .action-buttons {
                             margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #profile{
+        #profile-info{
+            .container{
+                .row{
+                    .right-side-wrapper{
+                        .head{
+                            .actions{
+                                .profile-dropdown{
+                                    .profile-dropdown-menu{
+                                        min-width: 200px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

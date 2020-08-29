@@ -292,5 +292,11 @@ $(document).ready(function () {
         $(this).next().toggleClass('pd-menu-active');
     });
 
-    
+    $('.post-dropdown .button').click(function(){
+        $(this).next().toggleClass('post-dropdown-active');
+    });
+
+    $('.profile-dropdown .profile-dropdown-button').click(function(){
+        $(this).next().toggleClass('profile-dropdown-active');
+    });
 });
