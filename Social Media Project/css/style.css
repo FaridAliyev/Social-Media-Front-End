@@ -78,6 +78,42 @@ body {
   display: block !important;
 }
 
+.report-modal .modal-dialog .modal-content .modal-body .container-fluid .row .input-wrapper {
+  width: 100%;
+}
+
+.report-modal .modal-dialog .modal-content .modal-body .container-fluid .row .input-wrapper input {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  border-color: #dbdbdb;
+  color: #363636;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.report-modal .modal-dialog .modal-content .modal-body .container-fluid .row .input-wrapper input::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+
+.report-modal .modal-dialog .modal-content .modal-body .container-fluid .row .input-wrapper input:-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+.report-modal .modal-dialog .modal-content .modal-body .container-fluid .row .input-wrapper input::-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+.report-modal .modal-dialog .modal-content .modal-body .container-fluid .row .input-wrapper input::placeholder {
+  color: #c0c0c0;
+}
+
+.report-modal .modal-dialog .modal-content .modal-body .container-fluid .row .input-wrapper input:focus {
+  border-color: #5596e6;
+}
+
 #navbar {
   -webkit-box-shadow: 2.424px 4.373px 17px 0 rgba(0, 0, 0, 0.14);
           box-shadow: 2.424px 4.373px 17px 0 rgba(0, 0, 0, 0.14);
@@ -498,7 +534,7 @@ body {
 }
 
 #main {
-  margin-top: 70px;
+  padding-top: 70px;
   background: #f4f4f4;
 }
 
@@ -609,8 +645,343 @@ body {
   outline: none;
 }
 
+#main .container .row .compose-card .content .compose .compose-form .control .publish::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .compose-form .control .publish:-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .compose-form .control .publish::-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .compose-form .control .publish::placeholder {
+  color: #c0c0c0;
+}
+
 #main .container .row .compose-card .content .compose .compose-form .control .publish[rows] {
   height: initial;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption {
+  display: none;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper {
+  width: 100%;
+  margin-top: 8px;
+  position: relative;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper input {
+  outline: none;
+  border: 1px solid transparent;
+  height: 36px;
+  font-size: 0.9rem;
+  color: #999;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #fff;
+  border-color: #dbdbdb;
+  border-radius: 4px;
+  padding-left: 36px;
+  padding-bottom: calc(0.5em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  line-height: 1.5;
+  max-width: 100%;
+  width: 100%;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper input::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper input:-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper input::-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper input::placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper input:hover {
+  border-color: #b5b5b5;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper input:focus {
+  border-color: #e8e8e8;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper input:focus + .icon {
+  color: #3d70b2;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36px;
+  width: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #cecece;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper .icon i {
+  font-size: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper .close-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 36px;
+  width: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #cecece;
+  cursor: pointer;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper .close-icon:hover i {
+  color: #393a4f;
+}
+
+#main .container .row .compose-card .content .compose .location-suboption .location-wrapper .close-icon i {
+  font-size: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption {
+  display: none;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper {
+  width: 100%;
+  margin-top: 8px;
+  position: relative;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper input {
+  outline: none;
+  border: 1px solid transparent;
+  height: 36px;
+  font-size: 0.9rem;
+  color: #999;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #fff;
+  border-color: #dbdbdb;
+  border-radius: 4px;
+  padding-left: 36px;
+  padding-bottom: calc(0.5em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  line-height: 1.5;
+  max-width: 100%;
+  width: 100%;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper input::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper input:-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper input::-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper input::placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper input:hover {
+  border-color: #b5b5b5;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper input:focus {
+  border-color: #e8e8e8;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper input:focus + .icon {
+  color: #3d70b2;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36px;
+  width: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #cecece;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper .icon i {
+  font-size: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper .close-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 36px;
+  width: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #cecece;
+  cursor: pointer;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper .close-icon:hover i {
+  color: #393a4f;
+}
+
+#main .container .row .compose-card .content .compose .link-suboption .link-wrapper .close-icon i {
+  font-size: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption {
+  display: none;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper {
+  width: 100%;
+  margin-top: 8px;
+  position: relative;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper select {
+  font-size: 0.9rem;
+  color: #999;
+  background-color: #fff;
+  border-radius: 4px;
+  line-height: 1.5;
+  max-width: 100%;
+  width: 100%;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper select::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper select:-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper select::-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper select::placeholder {
+  color: #c0c0c0;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper select:focus {
+  border-color: #e8e8e8;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper select:focus + .icon {
+  color: #3d70b2;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36px;
+  width: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #cecece;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper .icon i {
+  font-size: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper .close-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 36px;
+  width: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #cecece;
+  cursor: pointer;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper .close-icon:hover i {
+  color: #393a4f;
+}
+
+#main .container .row .compose-card .content .compose .tag-suboption .tag-wrapper .close-icon i {
+  font-size: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 #main .container .row .compose-card .content .compose-options {
@@ -620,6 +991,8 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 8px;
   border-radius: 0 0 6px 6px;
   background: #fff;
@@ -777,7 +1150,7 @@ body {
   padding: 0 10px;
 }
 
-#main .container .row .feed-post .content-wrapper .post-card-header .user-block .user-info .username {
+#main .container .row .feed-post .content-wrapper .post-card-header .user-block .user-info span .username {
   line-height: 1.1;
   font-size: 1rem;
   font-weight: 500;
@@ -787,8 +1160,27 @@ body {
   transition: color 0.3s;
 }
 
-#main .container .row .feed-post .content-wrapper .post-card-header .user-block .user-info .username:hover {
+#main .container .row .feed-post .content-wrapper .post-card-header .user-block .user-info span .username:hover {
   color: black;
+}
+
+#main .container .row .feed-post .content-wrapper .post-card-header .user-block .user-info span .tagged-user {
+  line-height: 1.1;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #393a4f;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  font-weight: 600;
+}
+
+#main .container .row .feed-post .content-wrapper .post-card-header .user-block .user-info span .tagged-user:hover {
+  color: black;
+}
+
+#main .container .row .feed-post .content-wrapper .post-card-header .user-block .user-info span .post-location {
+  font-weight: 600;
 }
 
 #main .container .row .feed-post .content-wrapper .post-card-header .user-block .user-info .time {
@@ -864,6 +1256,7 @@ body {
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 #main .container .row .feed-post .content-wrapper .post-card-header .post-dropdown .post-dropdown-menu .dropdown-content .post-dropdown-item .media {
@@ -2119,6 +2512,7 @@ body {
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 #profile #profile-info .container .row .right-side-wrapper .head .actions .profile-dropdown .profile-dropdown-menu .dropdown-content .profile-dropdown-item .media {
@@ -3057,8 +3451,8 @@ body {
 }
 
 #profile #settings-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button {
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 #profile #settings-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button:not(:last-child) {
@@ -3208,6 +3602,7 @@ body {
   text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 #post-details .container .row .feed-post .content-wrapper .post-card-header .post-dropdown .post-dropdown-menu .dropdown-content .post-dropdown-item .media {
@@ -3539,6 +3934,10 @@ body {
   border-radius: 50%;
 }
 
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta {
+  position: relative;
+}
+
 #post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta h4 {
   margin: 0;
   font-weight: normal;
@@ -3567,6 +3966,110 @@ body {
   max-width: 640px;
   font-size: 0.95rem;
   color: #6a6c93;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-button:hover {
+  background: #f5f5f5;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-button i {
+  font-size: 18px;
+  color: #888da8;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-menu {
+  -webkit-box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
+  border-color: #e8e8e8;
+  min-width: 280px;
+  position: absolute;
+  top: 32px;
+  z-index: 20;
+  right: 0;
+  left: auto;
+  color: #4a4a4a;
+  display: none;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-menu .dropdown-content {
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-menu .dropdown-content .comment-dropdown-item {
+  padding-right: 1rem;
+  padding: 0.5rem 1rem;
+  color: #4a4a4a;
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  position: relative;
+  width: 100%;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-menu .dropdown-content .comment-dropdown-item .media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-menu .dropdown-content .comment-dropdown-item .media i {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #ff2400;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-menu .dropdown-content .comment-dropdown-item .media .media-content {
+  line-height: 1.2;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-menu .dropdown-content .comment-dropdown-item .media .media-content h3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #ff2400;
+  line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-menu .dropdown-content .comment-dropdown-item:hover {
+  background: #fafafa;
+}
+
+#post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-content .comments-meta .comment-dropdown .comment-dropdown-active {
+  display: block;
 }
 
 #post-details .container .row .feed-post .content-wrapper .comments-wrapper .comment .comment-stats-wrapper {
@@ -4078,6 +4581,13 @@ body {
   }
 }
 
+@media (max-width: 537px) {
+  #main .container .row .compose-card .content .compose-options .compose-option {
+    width: 47%;
+    margin-top: 5px;
+  }
+}
+
 @media (max-width: 500px) {
   #navbar .container .row .nav-items .navigation {
     padding: 10px;
@@ -4121,6 +4631,12 @@ body {
   }
   #profile {
     padding-top: 64px;
+  }
+}
+
+@media (max-width: 380px) {
+  #main .container .row .compose-card .content .compose-options .compose-option {
+    width: 100%;
   }
 }
 

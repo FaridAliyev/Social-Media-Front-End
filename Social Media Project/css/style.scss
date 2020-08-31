@@ -76,6 +76,38 @@ body {
     display: block !important;
 }
 
+.report-modal {
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                .container-fluid {
+                    .row {
+                        .input-wrapper {
+                            width: 100%;
+                            input {
+                                border: 1px solid transparent;
+                                border-radius: 4px;
+                                outline: none;
+                                width: 100%;
+                                padding: 10px;
+                                border-color: #dbdbdb;
+                                color: #363636;
+                                transition: all .3s;
+                                &::placeholder {
+                                    color: #c0c0c0;
+                                }
+                                &:focus {
+                                    border-color: #5596e6;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 // feed
 
 #navbar {
@@ -415,7 +447,7 @@ body {
 }
 
 #main {
-    margin-top: 70px;
+    padding-top: 70px;
     background: #f4f4f4;
     .container {
         .row {
@@ -496,8 +528,221 @@ body {
                                     max-width: 100%;
                                     min-width: 100%;
                                     outline: none;
+                                    &::placeholder {
+                                        color: #c0c0c0;
+                                    }
                                     &[rows] {
                                         height: initial;
+                                    }
+                                }
+                            }
+                        }
+                        .location-suboption {
+                            display: none;
+                            .location-wrapper {
+                                width: 100%;
+                                margin-top: 8px;
+                                position: relative;
+                                input {
+                                    outline: none;
+                                    border: 1px solid transparent;
+                                    height: 36px;
+                                    font-size: 0.9rem;
+                                    color: #999;
+                                    transition: all 0.3s;
+                                    background-color: #fff;
+                                    border-color: #dbdbdb;
+                                    border-radius: 4px;
+                                    padding-left: 36px;
+                                    padding-bottom: calc(0.5em - 1px);
+                                    padding-right: calc(0.75em - 1px);
+                                    padding-top: calc(0.5em - 1px);
+                                    line-height: 1.5;
+                                    max-width: 100%;
+                                    width: 100%;
+                                    &::placeholder {
+                                        color: #c0c0c0;
+                                    }
+                                    &:hover {
+                                        border-color: #b5b5b5;
+                                    }
+                                    &:focus {
+                                        border-color: #e8e8e8;
+                                    }
+                                    &:focus + .icon {
+                                        color: #3d70b2;
+                                    }
+                                }
+                                .icon {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    height: 36px;
+                                    width: 36px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: #cecece;
+                                    i {
+                                        font-size: 16px;
+                                        transition: all 0.3s;
+                                    }
+                                }
+                                .close-icon {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    height: 36px;
+                                    width: 36px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: #cecece;
+                                    cursor: pointer;
+                                    &:hover {
+                                        i {
+                                            color: #393a4f;
+                                        }
+                                    }
+                                    i {
+                                        font-size: 16px;
+                                        transition: all 0.3s;
+                                    }
+                                }
+                            }
+                        }
+                        .link-suboption {
+                            display: none;
+                            .link-wrapper {
+                                width: 100%;
+                                margin-top: 8px;
+                                position: relative;
+                                input {
+                                    outline: none;
+                                    border: 1px solid transparent;
+                                    height: 36px;
+                                    font-size: 0.9rem;
+                                    color: #999;
+                                    transition: all 0.3s;
+                                    background-color: #fff;
+                                    border-color: #dbdbdb;
+                                    border-radius: 4px;
+                                    padding-left: 36px;
+                                    padding-bottom: calc(0.5em - 1px);
+                                    padding-right: calc(0.75em - 1px);
+                                    padding-top: calc(0.5em - 1px);
+                                    line-height: 1.5;
+                                    max-width: 100%;
+                                    width: 100%;
+                                    &::placeholder {
+                                        color: #c0c0c0;
+                                    }
+                                    &:hover {
+                                        border-color: #b5b5b5;
+                                    }
+                                    &:focus {
+                                        border-color: #e8e8e8;
+                                    }
+                                    &:focus + .icon {
+                                        color: #3d70b2;
+                                    }
+                                }
+                                .icon {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    height: 36px;
+                                    width: 36px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: #cecece;
+                                    i {
+                                        font-size: 16px;
+                                        transition: all 0.3s;
+                                    }
+                                }
+                                .close-icon {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    height: 36px;
+                                    width: 36px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: #cecece;
+                                    cursor: pointer;
+                                    &:hover {
+                                        i {
+                                            color: #393a4f;
+                                        }
+                                    }
+                                    i {
+                                        font-size: 16px;
+                                        transition: all 0.3s;
+                                    }
+                                }
+                            }
+                        }
+                        .tag-suboption {
+                            display: none;
+                            .tag-wrapper {
+                                width: 100%;
+                                margin-top: 8px;
+                                position: relative;
+                                select {
+                                    font-size: 0.9rem;
+                                    color: #999;
+                                    background-color: #fff;
+                                    border-radius: 4px;
+                                    line-height: 1.5;
+                                    max-width: 100%;
+                                    width: 100%;
+                                    &::placeholder {
+                                        color: #c0c0c0;
+                                    }
+                                    &:focus {
+                                        border-color: #e8e8e8;
+                                    }
+                                    &:focus + .icon {
+                                        color: #3d70b2;
+                                    }
+                                }
+                                .icon {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    height: 36px;
+                                    width: 36px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: #cecece;
+                                    i {
+                                        font-size: 16px;
+                                        transition: all 0.3s;
+                                    }
+                                }
+                                .close-icon {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    height: 36px;
+                                    width: 36px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: #cecece;
+                                    cursor: pointer;
+                                    &:hover {
+                                        i {
+                                            color: #393a4f;
+                                        }
+                                    }
+                                    i {
+                                        font-size: 16px;
+                                        transition: all 0.3s;
                                     }
                                 }
                             }
@@ -506,6 +751,7 @@ body {
                     .compose-options {
                         display: flex;
                         justify-content: flex-start;
+                        flex-wrap: wrap;
                         padding: 8px;
                         border-radius: 0 0 6px 6px;
                         background: #fff;
@@ -628,15 +874,32 @@ body {
                             }
                             .user-info {
                                 padding: 0 10px;
-                                .username {
-                                    line-height: 1.1;
-                                    font-size: 1rem;
-                                    font-weight: 500;
-                                    color: #393a4f;
-                                    text-decoration: none;
-                                    transition: color 0.3s;
-                                    &:hover {
-                                        color: black;
+                                span {
+                                    .username {
+                                        line-height: 1.1;
+                                        font-size: 1rem;
+                                        font-weight: 500;
+                                        color: #393a4f;
+                                        text-decoration: none;
+                                        transition: color 0.3s;
+                                        &:hover {
+                                            color: black;
+                                        }
+                                    }
+                                    .tagged-user {
+                                        line-height: 1.1;
+                                        font-size: 1rem;
+                                        font-weight: 500;
+                                        color: #393a4f;
+                                        text-decoration: none;
+                                        transition: color 0.3s;
+                                        font-weight: 600;
+                                        &:hover {
+                                            color: black;
+                                        }
+                                    }
+                                    .post-location {
+                                        font-weight: 600;
                                     }
                                 }
                                 .time {
@@ -695,6 +958,7 @@ body {
                                         width: 100%;
                                         text-decoration: none;
                                         transition: all 0.3s;
+                                        cursor: pointer;
                                         .media {
                                             display: flex;
                                             align-items: center;
@@ -1584,7 +1848,7 @@ body {
                         .actions {
                             display: flex;
                             align-items: center;
-                            .profile-dropdown{
+                            .profile-dropdown {
                                 position: relative;
                                 .profile-dropdown-button {
                                     margin-left: 10px;
@@ -1596,7 +1860,7 @@ body {
                                         font-size: 25px;
                                     }
                                 }
-                                .profile-dropdown-menu{
+                                .profile-dropdown-menu {
                                     box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
                                     border-color: #e8e8e8;
                                     min-width: 280px;
@@ -1622,6 +1886,7 @@ body {
                                             width: 100%;
                                             text-decoration: none;
                                             transition: all 0.3s;
+                                            cursor: pointer;
                                             .media {
                                                 display: flex;
                                                 align-items: center;
@@ -1648,7 +1913,7 @@ body {
                                         }
                                     }
                                 }
-                                .profile-dropdown-active{
+                                .profile-dropdown-active {
                                     display: block;
                                 }
                             }
@@ -2332,30 +2597,30 @@ body {
             }
         }
     }
-    #settings-modal{
-        .modal-dialog{
-            .modal-content{
-                .modal-body{
+    #settings-modal {
+        .modal-dialog {
+            .modal-content {
+                .modal-body {
                     padding: 0;
-                    .container-fluid{
-                        .row{
-                            .setting-button{
-                                transition: all .3s;
-                                &:not(:last-child){
+                    .container-fluid {
+                        .row {
+                            .setting-button {
+                                transition: all 0.3s;
+                                &:not(:last-child) {
                                     border-bottom: 1px solid #dbdbdb;
                                 }
-                                &:hover{
+                                &:hover {
                                     background: #ebe2e2;
                                 }
-                                a{
+                                a {
                                     padding: 10px;
                                     text-decoration: none;
                                     color: black;
                                     display: block;
                                     width: 100%;
                                 }
-                                &:last-child{
-                                    a{
+                                &:last-child {
+                                    a {
                                         color: #ff2400;
                                     }
                                 }
@@ -2467,6 +2732,7 @@ body {
                                         width: 100%;
                                         text-decoration: none;
                                         transition: all 0.3s;
+                                        cursor: pointer;
                                         .media {
                                             display: flex;
                                             align-items: center;
@@ -2714,6 +2980,7 @@ body {
                             }
                             .comment-content {
                                 .comments-meta {
+                                    position: relative;
                                     h4 {
                                         margin: 0;
                                         font-weight: normal;
@@ -2737,6 +3004,84 @@ body {
                                         max-width: 640px;
                                         font-size: 0.95rem;
                                         color: #6a6c93;
+                                    }
+                                    .comment-dropdown {
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        .comment-dropdown-button {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            cursor: pointer;
+                                            border-radius: 50%;
+                                            height: 32px;
+                                            width: 32px;
+                                            transition: background 0.3s;
+                                            &:hover {
+                                                background: #f5f5f5;
+                                            }
+                                            i {
+                                                font-size: 18px;
+                                                color: #888da8;
+                                            }
+                                        }
+                                        .comment-dropdown-menu {
+                                            box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
+                                            border-color: #e8e8e8;
+                                            min-width: 280px;
+                                            position: absolute;
+                                            top: 32px;
+                                            z-index: 20;
+                                            right: 0;
+                                            left: auto;
+                                            color: #4a4a4a;
+                                            display: none;
+                                            .dropdown-content {
+                                                border: 1px solid #e8e8e8;
+                                                background-color: #fff;
+                                                border-radius: 4px;
+                                                .comment-dropdown-item {
+                                                    padding-right: 1rem;
+                                                    padding: 0.5rem 1rem;
+                                                    color: #4a4a4a;
+                                                    display: block;
+                                                    font-size: 0.875rem;
+                                                    line-height: 1.5;
+                                                    position: relative;
+                                                    width: 100%;
+                                                    text-decoration: none;
+                                                    transition: all 0.3s;
+                                                    cursor: pointer;
+                                                    .media {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        i {
+                                                            font-size: 18px;
+                                                            margin-right: 10px;
+                                                            color: #ff2400;
+                                                        }
+                                                        .media-content {
+                                                            line-height: 1.2;
+                                                            h3 {
+                                                                margin: 0;
+                                                                font-weight: 600;
+                                                                font-size: 0.85rem;
+                                                                color: #ff2400;
+                                                                line-height: 1.2;
+                                                                font-family: "Montserrat", sans-serif;
+                                                            }
+                                                        }
+                                                    }
+                                                    &:hover {
+                                                        background: #fafafa;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .comment-dropdown-active {
+                                            display: block;
+                                        }
                                     }
                                 }
                             }
@@ -3214,6 +3559,24 @@ body {
         }
     }
 }
+@media (max-width: 537px) {
+    #main {
+        .container {
+            .row {
+                .compose-card {
+                    .content {
+                        .compose-options {
+                            .compose-option {
+                                width: 47%;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 500px) {
     #navbar {
         .container {
@@ -3262,7 +3625,23 @@ body {
         padding-top: 64px;
     }
 }
-
+@media (max-width: 380px) {
+    #main {
+        .container {
+            .row {
+                .compose-card {
+                    .content {
+                        .compose-options {
+                            .compose-option {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 370px) {
     #navbar {
         .container {
@@ -3319,15 +3698,15 @@ body {
             }
         }
     }
-    #profile{
-        #profile-info{
-            .container{
-                .row{
-                    .right-side-wrapper{
-                        .head{
-                            .actions{
-                                .profile-dropdown{
-                                    .profile-dropdown-menu{
+    #profile {
+        #profile-info {
+            .container {
+                .row {
+                    .right-side-wrapper {
+                        .head {
+                            .actions {
+                                .profile-dropdown {
+                                    .profile-dropdown-menu {
                                         min-width: 200px;
                                     }
                                 }

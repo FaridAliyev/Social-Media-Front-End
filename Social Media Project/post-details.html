@@ -211,14 +211,14 @@
                                     </div>
                                     <div class="post-dropdown-menu">
                                         <div class="dropdown-content">
-                                            <a href="#" class="post-dropdown-item">
+                                            <div class="post-dropdown-item" data-toggle="modal" data-target="#post-modal" data-postid="3">
                                                 <div class="media">
                                                     <i class="far fa-flag"></i>
                                                     <div class="media-content">
                                                         <h3>Report</h3>
                                                     </div>
                                                 </div>
-                                            </a>
+                                            </div>
                                             <a href="#" class="post-dropdown-item">
                                                 <div class="media">
                                                     <i class="far fa-trash-alt"></i>
@@ -327,6 +327,23 @@
                                                 <small> · 3 hours ago</small>
                                             </h4>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.</p>
+                                            <div class="comment-dropdown">
+                                                <div class="comment-dropdown-button">
+                                                    <i class="fas fa-ellipsis-h"></i>
+                                                </div>
+                                                <div class="comment-dropdown-menu">
+                                                    <div class="dropdown-content">
+                                                        <div class="comment-dropdown-item" data-toggle="modal" data-target="#comment-modal" data-commentid="3">
+                                                            <div class="media">
+                                                                <i class="far fa-flag"></i>
+                                                                <div class="media-content">
+                                                                    <h3>Report</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="comment-stats-wrapper">
                                             <div class="comment-stats">
@@ -356,6 +373,60 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="comment-modal" class="modal fade report-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger">Report Message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-wrapper">
+                                        <input type="text" placeholder="Tell us the reason...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary cm-send">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="post-modal" class="modal fade report-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger">Report Message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-wrapper">
+                                        <input type="text" placeholder="Tell us the reason...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary pm-send">Send</button>
                     </div>
                 </div>
             </div>
