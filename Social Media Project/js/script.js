@@ -196,7 +196,6 @@ $(document).ready(function () {
             $(".publish-owl-carousel").trigger('remove.owl.carousel', [i]).trigger('refresh.owl.carousel');
         }
         upload(ev.target.files);
-        console.log($(this).val())
         if ($(this).val() != "") {
             $('.preview-wrapper h6').hide();
             $('.hidden-preview .publish-remove').show();
@@ -348,7 +347,7 @@ $(document).ready(function () {
         $('#reg-password-input').prop('type', 'password');
     });
 
-    $('#reg-confirm-pass').on("cut copy paste", function (e) {
+    $('#reg-confirm-pass,#set-confirm-pass').on("cut copy paste", function (e) {
         e.preventDefault();
     });
 
@@ -392,4 +391,46 @@ $(document).ready(function () {
         let modal = $(this);
         modal.find('.um-send').attr('data-userid', userId);
     });
+
+    // settings
+
+    $('.cover-upload-trigger').click(function () {
+        $('#cover-input').click();
+    });   
+
+    $('#cover-input').change(function (ev) {
+        coverUpload(ev.target.files);
+    });
+
+    function coverUpload(files) {
+        for (let file of files) {
+            let reader = new FileReader();
+            reader.onloadend = function (ev) {
+                let img = $("<img>").attr("src", ev.target.result);
+                $('.settings-form-wrapper .profile-preview .profile-cover-wrapper').empty();
+                $('.settings-form-wrapper .profile-preview .profile-cover-wrapper').append(img);
+            }
+            reader.readAsDataURL(file);
+        }
+    }
+
+    $('.avatar-upload-trigger').click(function () {
+        $('#avatar-input').click();
+    });
+
+    $('#avatar-input').change(function (ev) {
+        avatarUpload(ev.target.files);
+    });
+
+    function avatarUpload(files) {
+        for (let file of files) {
+            let reader = new FileReader();
+            reader.onloadend = function (ev) {
+                let img = $("<img>").attr("src", ev.target.result);
+                $('.settings-form-wrapper .profile-preview .avatar-wrapper').empty();
+                $('.settings-form-wrapper .profile-preview .avatar-wrapper').append(img);
+            }
+            reader.readAsDataURL(file);
+        }
+    }
 });

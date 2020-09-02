@@ -92,7 +92,7 @@ body {
                                 padding: 10px;
                                 border-color: #dbdbdb;
                                 color: #363636;
-                                transition: all .3s;
+                                transition: all 0.3s;
                                 &::placeholder {
                                     color: #c0c0c0;
                                 }
@@ -138,7 +138,7 @@ body {
                         .search-field-wrapper {
                             position: relative;
                             .search-field {
-                                font-family: "Open Sans", sans-serif;
+                                outline: none;
                                 border: solid 1px #dbdbdb;
                                 height: 32px;
                                 width: 300px;
@@ -147,9 +147,11 @@ body {
                                 padding-right: 38px;
                                 padding-left: 38px;
                                 background: #f7f7f7;
+                                transition: all 0.3s;
                                 &:focus {
-                                    outline: none;
-                                    border: 1px solid #6b786e;
+                                    background: #fff;
+                                    box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+                                    border-color: #e3e3e3;
                                 }
                             }
                             .search-results-list {
@@ -1824,7 +1826,6 @@ body {
                         height: 130px;
                         width: 130px;
                         img {
-                            position: relative;
                             width: 100%;
                             height: 100%;
                             border-radius: 50%;
@@ -3434,6 +3435,489 @@ body {
     }
 }
 
+// settings
+
+#settings {
+    min-height: 100vh;
+    padding-top: 70px;
+    background: #f4f4f4;
+    .container {
+        .row {
+            .settings-wrapper {
+                padding: 30px;
+                width: 100%;
+                animation-duration: 0.5s;
+                animation-timing-function: ease;
+                animation-delay: 0s;
+                animation-iteration-count: 1;
+                animation-direction: normal;
+                animation-fill-mode: none;
+                animation-play-state: running;
+                animation-name: fadeInLeft;
+                .account-settings {
+                    .settings-panel {
+                        background: #fff;
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        border-radius: 6px;
+                        .title-wrapper {
+                            h2 {
+                                margin: 0;
+                                font-family: "Montserrat", sans-serif;
+                                font-size: 1.2rem;
+                                font-weight: 500;
+                                color: #999;
+                            }
+                        }
+                        .settings-form-wrapper {
+                            .settings-form {
+                                padding-top: 20px;
+                                width: 100%;
+                                color: #344258;
+                                .profile-preview {
+                                    width: 100%;
+                                    position: relative;
+                                    .profile-cover-wrapper {
+                                        width: 100%;
+                                        img {
+                                            max-height: 300px;
+                                            width: 100%;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                    .avatar-wrapper {
+                                        position: absolute;
+                                        bottom: -25px;
+                                        left: 0;
+                                        right: 0;
+                                        margin: 0 auto;
+                                        height: 130px;
+                                        width: 130px;
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            border-radius: 50%;
+                                            border: 4px solid #fff;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                }
+                            }
+                            .setting-buttons {
+                                display: flex;
+                                justify-content: center;
+                                padding-top: 40px;
+                                position: relative;
+                                button {
+                                    outline: none;
+                                    border: 1px solid transparent;
+                                    display: flex;
+                                    font-size: 0.8rem;
+                                    font-weight: 500;
+                                    padding: 18px 22px;
+                                    transition: all 0.3s;
+                                    background-color: #fff;
+                                    border-color: #dbdbdb;
+                                    border-width: 1px;
+                                    color: #363636;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 4px;
+                                    height: 2.5em;
+                                    line-height: 1.5;
+                                    margin-right: 5px;
+                                    &:hover {
+                                        border-color: #b5b5b5;
+                                        color: #363636;
+                                    }
+                                    i {
+                                        font-size: 18px;
+                                        margin-right: 6px;
+                                    }
+                                }
+                                input {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 0px;
+                                    height: 0px;
+                                    opacity: 0;
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .general-settings {
+                    margin-top: 5px;
+                    .settings-panel {
+                        background: #fff;
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        border-radius: 6px;
+                        .title-wrapper {
+                            h2 {
+                                margin: 0;
+                                font-family: "Montserrat", sans-serif;
+                                font-size: 1.2rem;
+                                font-weight: 500;
+                                color: #999;
+                            }
+                        }
+                        .settings-form-wrapper {
+                            display: flex;
+                            .settings-form {
+                                padding-top: 20px;
+                                width: 100%;
+                                max-width: 680px;
+                                color: #344258;
+                                .row {
+                                    .field {
+                                        border-radius: 6px;
+                                        border: 1px solid #e0e0e0;
+                                        margin-bottom: 0.75rem;
+                                        label {
+                                            margin: 0;
+                                            text-transform: uppercase;
+                                            font-size: 0.65rem;
+                                            color: #999;
+                                            padding-left: 6px;
+                                            font-weight: 500;
+                                        }
+                                        .control {
+                                            position: relative;
+                                            input {
+                                                outline: none;
+                                                border: none;
+                                                font-family: "Roboto", sans-serif;
+                                                padding-top: 0;
+                                                color: #5b5d7e;
+                                                border-radius: 8px;
+                                                height: 36px;
+                                                padding-left: 40px;
+                                                font-size: 0.9rem;
+                                                transition: all 0.3s;
+                                                max-width: 100%;
+                                                width: 100%;
+                                                &:focus {
+                                                    box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+                                                }
+                                                &:focus + .form-icon i {
+                                                    color: #5596e6;
+                                                }
+                                            }
+                                            textarea {
+                                                outline: none;
+                                                border: none;
+                                                font-family: "Roboto", sans-serif;
+                                                padding-top: 0;
+                                                color: #5b5d7e;
+                                                border-radius: 8px;
+                                                font-size: 0.9rem;
+                                                transition: all 0.3s;
+                                                display: block;
+                                                max-width: 100%;
+                                                min-width: 100%;
+                                                padding: calc(0.75em - 1px);
+                                                resize: vertical;
+                                                &::placeholder {
+                                                    color: #c0c0c0;
+                                                }
+                                                &:focus {
+                                                    box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+                                                }
+                                            }
+                                            .form-icon {
+                                                left: 0px;
+                                                height: 26px;
+                                                width: 26px;
+                                                position: absolute;
+                                                top: 0;
+                                                height: 36px;
+                                                width: 36px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                i {
+                                                    font-size: 17px;
+                                                    color: #cecece;
+                                                    transition: color 0.3s;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .illustration {
+                                padding: 40px;
+                                img {
+                                    display: block;
+                                    max-width: 200px;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+                .security-settings {
+                    margin-top: 5px;
+                    .settings-panel {
+                        background: #fff;
+                        padding: 30px;
+                        border: 1px solid #e0e0e0;
+                        border-radius: 6px;
+                        .title-wrapper {
+                            h2 {
+                                margin: 0;
+                                font-family: "Montserrat", sans-serif;
+                                font-size: 1.2rem;
+                                font-weight: 500;
+                                color: #999;
+                            }
+                        }
+                        .settings-form-wrapper {
+                            display: flex;
+                            .settings-form {
+                                padding-top: 20px;
+                                width: 100%;
+                                max-width: 680px;
+                                color: #344258;
+                                .row {
+                                    height: 100%;
+                                    .field {
+                                        border-radius: 6px;
+                                        border: 1px solid #e0e0e0;
+                                        margin-bottom: 0.75rem;
+                                        label {
+                                            margin: 0;
+                                            text-transform: uppercase;
+                                            font-size: 0.65rem;
+                                            color: #999;
+                                            padding-left: 6px;
+                                            font-weight: 500;
+                                        }
+                                        .control {
+                                            position: relative;
+                                            input {
+                                                outline: none;
+                                                border: none;
+                                                font-family: "Roboto", sans-serif;
+                                                padding-top: 0;
+                                                color: #5b5d7e;
+                                                border-radius: 8px;
+                                                height: 36px;
+                                                padding-left: 40px;
+                                                font-size: 0.9rem;
+                                                transition: all 0.3s;
+                                                max-width: 100%;
+                                                width: 100%;
+                                                &:focus {
+                                                    box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+                                                }
+                                                &:focus + .form-icon i {
+                                                    color: #5596e6;
+                                                }
+                                            }
+                                            .form-icon {
+                                                left: 0px;
+                                                height: 26px;
+                                                width: 26px;
+                                                position: absolute;
+                                                top: 0;
+                                                height: 36px;
+                                                width: 36px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                i {
+                                                    font-size: 17px;
+                                                    color: #cecece;
+                                                    transition: color 0.3s;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .switch-field {
+                                        padding-bottom: 10px;
+                                        .switch-block {
+                                            display: flex;
+                                            align-items: center;
+                                            .switch {
+                                                position: relative;
+                                                display: inline-block;
+                                                min-width: 46px;
+                                                max-width: 46px;
+                                                min-height: 26px;
+                                                min-height: 26px;
+                                                margin: 0;
+                                                input {
+                                                    opacity: 0;
+                                                    width: 0;
+                                                    height: 0;
+                                                    &:checked + span {
+                                                        background: #5596e6;
+                                                    }
+                                                    &:focus + span {
+                                                        box-shadow: 0 0 1px #5596e6;
+                                                    }
+                                                    &:checked + span::before {
+                                                        transform: translateX(19px);
+                                                    }
+                                                }
+                                                span {
+                                                    position: absolute;
+                                                    cursor: pointer;
+                                                    top: 0;
+                                                    left: 0;
+                                                    right: 0;
+                                                    bottom: 0;
+                                                    background-color: #ccc;
+                                                    transition: 0.4s;
+                                                    border-radius: 34px;
+                                                    &::before {
+                                                        position: absolute;
+                                                        content: "";
+                                                        height: 19px;
+                                                        width: 20px;
+                                                        left: 4px;
+                                                        bottom: 4px;
+                                                        background-color: white;
+                                                        transition: 0.4s;
+                                                        border-radius: 50%;
+                                                    }
+                                                }
+                                            }
+                                            .meta {
+                                                margin-left: 10px;
+                                                h4 {
+                                                    margin: 0;
+                                                    font-family: "Montserrat", sans-serif;
+                                                    font-weight: 600;
+                                                    font-size: 0.8rem;
+                                                    color: #393a4f;
+                                                }
+                                                p {
+                                                    margin: 0;
+                                                    font-size: 0.8rem;
+                                                    color: #999;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .set-form-buttons {
+                                        margin-bottom: -0.5rem;
+                                        margin-top: 95px;
+                                        button {
+                                            height: 44px;
+                                            min-width: 160px;
+                                            margin-right: 0.5rem;
+                                            background: #5596e6;
+                                            border-color: #5596e6;
+                                            color: #fff;
+                                            margin-bottom: 0.5rem;
+                                            outline: none;
+                                            border: 1px solid transparent;
+                                            display: flex;
+                                            font-size: 0.8rem;
+                                            font-weight: 500;
+                                            padding: 18px 22px;
+                                            transition: all 0.3s;
+                                            border-width: 1px;
+                                            justify-content: center;
+                                            align-items: center;
+                                            border-radius: 4px;
+                                        }
+                                    }
+                                }
+                            }
+                            .illustration {
+                                padding: 40px;
+                                img {
+                                    display: block;
+                                    max-width: 200px;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #cover-modal {
+        .modal-dialog {
+            .modal-content {
+                .modal-body {
+                    padding: 0;
+                    .container-fluid {
+                        .row {
+                            .setting-button {
+                                transition: all 0.3s;
+                                &:not(:last-child) {
+                                    border-bottom: 1px solid #dbdbdb;
+                                }
+                                &:hover {
+                                    background: #ebe2e2;
+                                }
+                                a {
+                                    padding: 10px;
+                                    text-decoration: none;
+                                    color: black;
+                                    display: block;
+                                    width: 100%;
+                                    cursor: pointer;
+                                    color: $blue;
+                                }
+                                &:last-child {
+                                    a {
+                                        color: #ff2400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #avatar-modal {
+        .modal-dialog {
+            .modal-content {
+                .modal-body {
+                    padding: 0;
+                    .container-fluid {
+                        .row {
+                            .setting-button {
+                                transition: all 0.3s;
+                                &:not(:last-child) {
+                                    border-bottom: 1px solid #dbdbdb;
+                                }
+                                &:hover {
+                                    background: #ebe2e2;
+                                }
+                                a {
+                                    padding: 10px;
+                                    text-decoration: none;
+                                    color: black;
+                                    display: block;
+                                    width: 100%;
+                                    cursor: pointer;
+                                    color: $blue;
+                                }
+                                &:last-child {
+                                    a {
+                                        color: #ff2400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 991px) {
     #navbar {
         .container {
@@ -3502,6 +3986,32 @@ body {
             }
         }
     }
+    #settings {
+        .container {
+            .row {
+                .settings-wrapper {
+                    .general-settings{
+                        .settings-panel{
+                            .settings-form-wrapper{
+                                .illustration{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    .security-settings{
+                        .settings-panel{
+                            .settings-form-wrapper{
+                                .illustration{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media (max-width: 767px) {
     #login {
@@ -3554,6 +4064,15 @@ body {
                             text-align: center;
                         }
                     }
+                }
+            }
+        }
+    }
+    #settings {
+        .container {
+            .row {
+                .settings-wrapper {
+                    padding: 0;
                 }
             }
         }
@@ -3623,6 +4142,28 @@ body {
     }
     #profile {
         padding-top: 64px;
+    }
+    #settings {
+        .container {
+            .row {
+                .settings-wrapper {
+                    .account-settings{
+                        .settings-panel{
+                            .settings-form-wrapper{
+                                .settings-form{
+                                    .profile-preview{
+                                        .avatar-wrapper{
+                                            width: 100px;
+                                            height: 100px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 @media (max-width: 380px) {
@@ -3708,6 +4249,28 @@ body {
                                 .profile-dropdown {
                                     .profile-dropdown-menu {
                                         min-width: 200px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #settings {
+        .container {
+            .row {
+                .settings-wrapper {
+                    .account-settings{
+                        .settings-panel{
+                            .settings-form-wrapper{
+                                .settings-form{
+                                    .profile-preview{
+                                        .avatar-wrapper{
+                                            width: 80px;
+                                            height: 80px;
+                                        }
                                     }
                                 }
                             }

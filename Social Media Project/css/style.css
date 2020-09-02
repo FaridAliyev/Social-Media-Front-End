@@ -90,8 +90,8 @@ body {
   padding: 10px;
   border-color: #dbdbdb;
   color: #363636;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .report-modal .modal-dialog .modal-content .modal-body .container-fluid .row .input-wrapper input::-webkit-input-placeholder {
@@ -152,7 +152,7 @@ body {
 }
 
 #navbar .container .row .search-bar form .form-group .search-field-wrapper .search-field {
-  font-family: "Open Sans", sans-serif;
+  outline: none;
   border: solid 1px #dbdbdb;
   height: 32px;
   width: 300px;
@@ -161,11 +161,15 @@ body {
   padding-right: 38px;
   padding-left: 38px;
   background: #f7f7f7;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 #navbar .container .row .search-bar form .form-group .search-field-wrapper .search-field:focus {
-  outline: none;
-  border: 1px solid #6b786e;
+  background: #fff;
+  -webkit-box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+  border-color: #e3e3e3;
 }
 
 #navbar .container .row .search-bar form .form-group .search-field-wrapper .search-results-list {
@@ -2417,7 +2421,6 @@ body {
 }
 
 #profile #profile-info .container .row .left-side-wrapper .profile-avatar img {
-  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -4521,6 +4524,595 @@ body {
   margin-left: auto;
 }
 
+#settings {
+  min-height: 100vh;
+  padding-top: 70px;
+  background: #f4f4f4;
+}
+
+#settings .container .row .settings-wrapper {
+  padding: 30px;
+  width: 100%;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .title-wrapper h2 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #999;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .settings-form {
+  padding-top: 20px;
+  width: 100%;
+  color: #344258;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .settings-form .profile-preview {
+  width: 100%;
+  position: relative;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .settings-form .profile-preview .profile-cover-wrapper {
+  width: 100%;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .settings-form .profile-preview .profile-cover-wrapper img {
+  max-height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .settings-form .profile-preview .avatar-wrapper {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 130px;
+  width: 130px;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .settings-form .profile-preview .avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .setting-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+  position: relative;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .setting-buttons button {
+  outline: none;
+  border: 1px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 18px 22px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #fff;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: #363636;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  height: 2.5em;
+  line-height: 1.5;
+  margin-right: 5px;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .setting-buttons button:hover {
+  border-color: #b5b5b5;
+  color: #363636;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .setting-buttons button i {
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+#settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .setting-buttons input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#settings .container .row .settings-wrapper .general-settings {
+  margin-top: 5px;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .title-wrapper h2 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #999;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form {
+  padding-top: 20px;
+  width: 100%;
+  max-width: 680px;
+  color: #344258;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field {
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 0.75rem;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field label {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  color: #999;
+  padding-left: 6px;
+  font-weight: 500;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control {
+  position: relative;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control input {
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  padding-top: 0;
+  color: #5b5d7e;
+  border-radius: 8px;
+  height: 36px;
+  padding-left: 40px;
+  font-size: 0.9rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  max-width: 100%;
+  width: 100%;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control input:focus {
+  -webkit-box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control input:focus + .form-icon i {
+  color: #5596e6;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control textarea {
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  padding-top: 0;
+  color: #5b5d7e;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+  padding: calc(0.75em - 1px);
+  resize: vertical;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control textarea::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control textarea:-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control textarea::-ms-input-placeholder {
+  color: #c0c0c0;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control textarea::placeholder {
+  color: #c0c0c0;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control textarea:focus {
+  -webkit-box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control .form-icon {
+  left: 0px;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 0;
+  height: 36px;
+  width: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control .form-icon i {
+  font-size: 17px;
+  color: #cecece;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .illustration {
+  padding: 40px;
+}
+
+#settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .illustration img {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+#settings .container .row .settings-wrapper .security-settings {
+  margin-top: 5px;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .title-wrapper h2 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #999;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form {
+  padding-top: 20px;
+  width: 100%;
+  max-width: 680px;
+  color: #344258;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row {
+  height: 100%;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .field {
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 0.75rem;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .field label {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  color: #999;
+  padding-left: 6px;
+  font-weight: 500;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control {
+  position: relative;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control input {
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  padding-top: 0;
+  color: #5b5d7e;
+  border-radius: 8px;
+  height: 36px;
+  padding-left: 40px;
+  font-size: 0.9rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  max-width: 100%;
+  width: 100%;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control input:focus {
+  -webkit-box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control input:focus + .form-icon i {
+  color: #5596e6;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control .form-icon {
+  left: 0px;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 0;
+  height: 36px;
+  width: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .field .control .form-icon i {
+  font-size: 17px;
+  color: #cecece;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field {
+  padding-bottom: 10px;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field .switch-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field .switch-block .switch {
+  position: relative;
+  display: inline-block;
+  min-width: 46px;
+  max-width: 46px;
+  min-height: 26px;
+  min-height: 26px;
+  margin: 0;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field .switch-block .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field .switch-block .switch input:checked + span {
+  background: #5596e6;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field .switch-block .switch input:focus + span {
+  -webkit-box-shadow: 0 0 1px #5596e6;
+          box-shadow: 0 0 1px #5596e6;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field .switch-block .switch input:checked + span::before {
+  -webkit-transform: translateX(19px);
+          transform: translateX(19px);
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field .switch-block .switch span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field .switch-block .switch span::before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field .switch-block .meta {
+  margin-left: 10px;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field .switch-block .meta h4 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #393a4f;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .switch-field .switch-block .meta p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .set-form-buttons {
+  margin-bottom: -0.5rem;
+  margin-top: 95px;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .settings-form .row .set-form-buttons button {
+  height: 44px;
+  min-width: 160px;
+  margin-right: 0.5rem;
+  background: #5596e6;
+  border-color: #5596e6;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  outline: none;
+  border: 1px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 18px 22px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-width: 1px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .illustration {
+  padding: 40px;
+}
+
+#settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .illustration img {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+#settings #cover-modal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+}
+
+#settings #cover-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#settings #cover-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button:not(:last-child) {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#settings #cover-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button:hover {
+  background: #ebe2e2;
+}
+
+#settings #cover-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  color: #1877F2;
+}
+
+#settings #cover-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button:last-child a {
+  color: #ff2400;
+}
+
+#settings #avatar-modal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+}
+
+#settings #avatar-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#settings #avatar-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button:not(:last-child) {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#settings #avatar-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button:hover {
+  background: #ebe2e2;
+}
+
+#settings #avatar-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  color: #1877F2;
+}
+
+#settings #avatar-modal .modal-dialog .modal-content .modal-body .container-fluid .row .setting-button:last-child a {
+  color: #ff2400;
+}
+
 @media (max-width: 991px) {
   #navbar .container .row .search-bar {
     display: none;
@@ -4547,6 +5139,12 @@ body {
     max-height: 319px;
   }
   #profile #profile-content .container .row .separator {
+    display: none;
+  }
+  #settings .container .row .settings-wrapper .general-settings .settings-panel .settings-form-wrapper .illustration {
+    display: none;
+  }
+  #settings .container .row .settings-wrapper .security-settings .settings-panel .settings-form-wrapper .illustration {
     display: none;
   }
 }
@@ -4578,6 +5176,9 @@ body {
   }
   #profile #profile-info .container .row .right-side-wrapper .stats {
     text-align: center;
+  }
+  #settings .container .row .settings-wrapper {
+    padding: 0;
   }
 }
 
@@ -4632,6 +5233,10 @@ body {
   #profile {
     padding-top: 64px;
   }
+  #settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .settings-form .profile-preview .avatar-wrapper {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -4670,6 +5275,10 @@ body {
   }
   #profile #profile-info .container .row .right-side-wrapper .head .actions .profile-dropdown .profile-dropdown-menu {
     min-width: 200px;
+  }
+  #settings .container .row .settings-wrapper .account-settings .settings-panel .settings-form-wrapper .settings-form .profile-preview .avatar-wrapper {
+    width: 80px;
+    height: 80px;
   }
 }
 
