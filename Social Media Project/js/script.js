@@ -400,6 +400,7 @@ $(document).ready(function () {
 
     $('#cover-input').change(function (ev) {
         coverUpload(ev.target.files);
+        $('#cover-modal').modal('hide');
     });
 
     function coverUpload(files) {
@@ -420,6 +421,7 @@ $(document).ready(function () {
 
     $('#avatar-input').change(function (ev) {
         avatarUpload(ev.target.files);
+        $('#avatar-modal').modal('hide');
     });
 
     function avatarUpload(files) {

@@ -5113,6 +5113,160 @@ body {
   color: #ff2400;
 }
 
+#chat {
+  min-height: 100vh;
+  padding-top: 70px;
+  background: #f4f4f4;
+}
+
+#chat .container .row {
+  padding: 20px;
+}
+
+#chat .container .row .view-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 800px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  border-right: 1px solid #dbdbdb;
+  height: 100%;
+  width: 350px;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-heading {
+  background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  height: 60px;
+  padding: 0 20px;
+  width: 100%;
+  z-index: 2;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-heading .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-heading .content-wrapper h2 {
+  margin: 0;
+  color: #4a4a4a;
+  font-size: 1.2rem;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content {
+  height: 100%;
+  overflow: hidden;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content .content-wrapper {
+  height: 100%;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content .content-wrapper .chat-list {
+  overflow: hidden auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content .content-wrapper .chat-list .chat-list-item {
+  width: 100%;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content .content-wrapper .chat-list .chat-list-item a {
+  display: block;
+  width: 100%;
+  padding: 8px 20px;
+  text-decoration: none;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content .content-wrapper .chat-list .chat-list-item a:hover {
+  background: #fafafa;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content .content-wrapper .chat-list .chat-list-item a .chat-card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content .content-wrapper .chat-list .chat-list-item a .chat-card-wrapper .avatar-wrapper {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content .content-wrapper .chat-list .chat-list-item a .chat-card-wrapper .avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content .content-wrapper .chat-list .chat-list-item a .chat-card-wrapper .profile-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content .content-wrapper .chat-list .chat-list-item a .chat-card-wrapper .profile-meta .username {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #393a4f;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+#chat .container .row .view-wrapper .left-side-wrapper .box-content .content-wrapper .chat-list .chat-list-item a .chat-card-wrapper .profile-meta p {
+  margin: 0;
+  color: #999;
+  font-size: 0.8rem;
+}
+
 @media (max-width: 991px) {
   #navbar .container .row .search-bar {
     display: none;
